@@ -1,0 +1,59 @@
+.about-project
+  position: relative
+  background-image: url(../icon/about-bg.svg)
+  background-repeat: no-repeat
+  background-position: right 163%
+  background-repeat: no-repeat
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+  &__title
+    text-align: right
+    max-width: 878px
+    position: relative
+    svg
+      padding-inline: 2.5rem
+    &:before
+      content: attr(data-sign)
+      position: absolute
+      top: 0
+      left: 0
+      font-size: 18px
+      font-weight: 500
+      letter-spacing: normal
+      font-family: var(--font-family)
+  &__info
+    text-align: right
+    line-height: 1.1
+    margin-top: 1rem
+  &__item
+    margin-bottom: 3.5rem
+    span
+      color: var(--black-60)
+    p
+      margin-top: 1rem
+      +fs(28px)
+      font-weight: 600
+      letter-spacing: -0.01em
+      font-family: var(--second-family)
+  &__foot
+    display: flex
+    align-items: center
+    gap: 6rem
+  &__video
+    position: relative
+  &__play
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+  &__content
+    max-width: 425px
+  &__txt
+    +fs(18px)
+    line-height: 1.15
+    opacity: .6
+    margin-bottom: 3.5rem
+  &__more
+    padding: 2rem 2.5rem

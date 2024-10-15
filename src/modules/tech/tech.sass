@@ -1,0 +1,41 @@
+.tech
+  margin: 14rem 0
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: 2rem
+    margin-bottom: 6rem
+  &__title
+    &::before
+      content: attr(data-sign)
+      font-weight: 400
+      font-size: 18px
+      font-family: var(--font-family)
+      letter-spacing: normal
+      opacity: 0.6
+      margin-bottom: 1rem
+      display: block
+  &__sign
+    +fs(22px)
+    font-weight: 600
+    line-height: 1.05
+    font-family: var(--second-family)
+    max-width: 713px
+  &__list
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 2.5rem
+  &__item
+    padding: 2rem
+    box-sizing: border-box
+    border: 1px solid var(--cian)
+    border-radius: 25px
+    display: flex
+    flex-flow: column
+    justify-content: space-between
+    align-items: flex-start
+    gap: 2rem
+  &__txt
+    font-weight: 500
+    line-height: 1.1

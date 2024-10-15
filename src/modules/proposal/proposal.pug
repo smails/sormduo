@@ -1,0 +1,39 @@
++b.proposal
+  +e.inner.inner
+    +e.FORM.search()
+      +e.col
+        +e.caption Количество комнат
+        +e.list
+          +e.LABEL.radio
+            +e.INPUT.hidden(type="radio" name="room" value='Студия' checked)
+            +e.SPAN.txt Студия
+          +e.LABEL.radio
+            +e.INPUT.hidden(type="radio" name="room" value='1')
+            +e.SPAN.txt 1
+          +e.LABEL.radio
+            +e.INPUT.hidden(type="radio" name="room" value='2')
+            +e.SPAN.txt 2
+          +e.LABEL.radio
+            +e.INPUT.hidden(type="radio" name="room" value='3')
+            +e.SPAN.txt 3
+          +e.LABEL.radio
+            +e.INPUT.hidden(type="radio" name="room" value='4+')
+            +e.SPAN.txt 4+
+      +e.col
+        +e.caption Площадь, м²
+        +e.list
+          +e.group(data-sign="от" )
+            +e.INPUT.field(name='sq_to')
+          +e.group(data-sign="до" )
+            +e.INPUT.field(name='sq_from')
+      +e.col
+        +e.caption Цена, млн ₽
+        +e.list
+          +e.group(data-sign="от" )
+            +e.INPUT.field(name='price_to')
+          +e.group(data-sign="до" )
+            +e.INPUT.field(name='price_from')
+      +e.col
+        +e.BUTTON.submit.btn_orange Показать
+          span  3 450 
+          | вариантов

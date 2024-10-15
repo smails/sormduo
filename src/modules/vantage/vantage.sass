@@ -1,0 +1,59 @@
+.vantage
+  margin: 6rem 0 8rem
+  &__inner
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 2rem
+  &__item
+    border-radius: 30px
+    padding: 2.6rem 3rem
+    display: flex
+    flex-flow: column
+    justify-content: space-between
+    align-items: flex-start
+    gap: 3.8rem
+    &:first-of-type
+      background: #c6dfea
+    &:nth-of-type(2)
+      background: var(--gray-xs)
+    &:last-of-type
+      border: 1px solid var(--black-20)
+  &__caption
+    font-weight: 600
+    line-height: 1.05
+    font-family: var(--second-family)
+    display: flex
+    align-items: center
+    gap: 1.2rem
+    span
+      &:first-of-type
+        +fs(48px)
+      &:last-of-type
+        +fs(22px)
+  &__txt
+    +fs(18px)
+    opacity: .6
+    line-height: 1.15
+  &__subs
+    display: flex
+    &:after
+      content: attr(data-count)
+      width: 43px
+      height: 43px
+      border-radius: 100%
+      background: #d8ebf3
+      text-align: center
+      font-weight: 500
+      +fs(14px)
+      line-height: 43px
+      margin-left: -12px
+  &__icon
+    width: 43px
+    height: 43px
+    border-radius: 100%
+    border: 2px solid var(--white)
+    margin-left: -12px
+  &__holder
+    font-weight: 500
+    +fs(18px)
+    line-height: 1.1

@@ -1,0 +1,57 @@
+.banner
+  &__container
+    position: relative
+  &__videos
+    position: absolute
+    top: 2rem
+    right: 2rem
+  &__video
+    padding: 2rem
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 10px
+    max-width: 300px
+    border-radius: 15px
+    margin-bottom: .5rem
+    font-weight: 500
+    box-sizing: border-box
+    svg
+      flex-shrink: 0
+    &_blue
+      background: var(--lazur)
+      color: var(--white)
+      path
+        fill: var(--brown)
+      rect
+        fill: var(--yellow)
+    &_white
+      background: var(--white)
+      color: var(--black)
+      path
+        fill: var(--white)
+      rect
+        fill: var(--lazur)
+  &__slide
+    position: relative
+    color: var(--white)
+  &__title
+    margin-bottom: 1.5rem
+  &__subtitle
+    +fs(22px)
+    font-family: var(--second-family)
+    line-height: 1.05
+    font-weight: 600
+    margin-bottom: 4rem
+  &__pic
+    width: 100%
+    vertical-align: middle
+    border-radius: 40px
+  &__content
+    position: absolute
+    bottom: 3rem
+    left: 6rem
+  .slider-arrows
+    position: absolute
+    bottom: 3rem
+    right: 6rem

@@ -1,0 +1,45 @@
+.selection
+  &__container
+    position: relative
+    &:before
+      content: ''
+      width: 100%
+      height: 100%
+      z-index: 1
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 80.96%)
+      bottom: 0
+      left: 0
+      position: absolute
+  &__pic
+    width: 100%
+    vertical-align: middle
+  &__info
+    position: absolute
+    bottom: 0
+    left: 0
+    padding: 6rem
+    box-sizing: border-box
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    gap: 3rem
+    flex-wrap: wrap
+    z-index: 3
+    width: 100%
+  &__title
+    font-family: var(--second-family)
+    font-weight: 500
+    +fs(58px)
+    line-height: 110%
+    letter-spacing: -0.04em
+    color: var(--white)
+    max-width: 818px
+    span
+      text-align: right
+      display: block
+  &__box
+    max-width: 290px
+  &__txt
+    color: var(--white)
+    line-height: 1.1
+    margin-bottom: 3.5rem

@@ -1,0 +1,68 @@
+.contacts
+  &__container
+    position: relative
+    &:before
+      content: ''
+      width: calc(100% + 10rem)
+      height: calc(100% + 10rem)
+      position: absolute
+      top: -5rem
+      left: -5rem
+      background-image: url(../img/contacts.png)
+      border-radius: 40px
+      background-repeat: no-repeat
+      background-size: cover
+      z-index: -1
+  &__info
+    border-radius: 30px
+    background: var(--white)
+    padding: 4rem 3.5rem
+    box-sizing: border-box
+    max-width: 416px
+    position: relative
+  &__title
+    margin-bottom: 3rem
+  &__box
+    padding: 2rem
+    border-radius: 15px
+    background: var(--gray-xs)
+    position: relative
+    margin-bottom: 3rem
+  &__phone
+    font-weight: 600
+    +fs(22px)
+    font-family: var(--second-family)
+  &__time
+    font-weight: 500
+    color: var(--black-60)
+    +fs(14px)
+  &__icon
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    right: 2rem
+  &__item
+    margin-bottom: 2rem
+  &__caption
+    +fs(18px)
+    font-weight: 600
+    line-height: 1.1
+    margin-bottom: 1.2rem
+  &__txt
+    +fs(18px)
+    line-height: 1.15
+    color: var(--black-60)
+  &__mail
+    +fs(18px)
+    font-weight: 500
+    color: var(--lazur)
+  &__btn
+    margin-top: .8rem
+    padding: 2rem 3.75rem
+  &__social
+    position: absolute
+    right: 3.5rem
+    bottom: 4rem
+    display: flex
+    flex-flow: column
+    gap: 0.5rem

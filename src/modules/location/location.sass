@@ -1,0 +1,36 @@
+.location
+  margin: 5.5rem 0 7.5rem
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 4rem
+  &__slider
+    margin-left: calc((100% - 1240px) / 2)
+  &__slide
+    position: relative
+    &::before
+      content: attr(data-time)
+      backdrop-filter: blur(12px)
+      padding: 1.2rem 1.5rem 1.2rem 4.5rem
+      background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='32' height='32' rx='16' fill='%23006E90'/%3E%3Cpath d='M12.6641 22L14.6641 19.3333M18.6641 22L17.3307 19.3333L15.3307 17.3333L15.9974 13.3333M15.9974 10.6667C15.9974 10.8435 16.0676 11.013 16.1927 11.1381C16.3177 11.2631 16.4873 11.3333 16.6641 11.3333C16.8409 11.3333 17.0104 11.2631 17.1355 11.1381C17.2605 11.013 17.3307 10.8435 17.3307 10.6667C17.3307 10.4899 17.2605 10.3203 17.1355 10.1953C17.0104 10.0702 16.8409 10 16.6641 10C16.4873 10 16.3177 10.0702 16.1927 10.1953C16.0676 10.3203 15.9974 10.4899 15.9974 10.6667Z' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 16L13.3333 14L16 13.3333L18 15.3333L20 16' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+      background-color: var(--blur)
+      background-position: 5px center
+      background-repeat: no-repeat
+      border-radius: 100px
+      font-weight: 500
+      +fs(14px)
+      color: var(--white)
+      position: absolute
+      top: 1.5rem
+      left: 1.5rem
+  &__txt
+    position: absolute
+    left: 0
+    bottom: 0
+    font-weight: 500
+    +fs(18px)
+    line-height: 1.1
+  .slick-slide
+    margin-right: 2.5rem
+

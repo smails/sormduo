@@ -1,0 +1,42 @@
+.features
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 4.4rem
+  &__slider
+    margin-left: calc((100% - 1240px) / 2)
+  &__slide
+    position: relative
+  &__wrap
+    display: flex
+    gap: 4.4rem
+    width: clamp(500px, 38vw, 713px)
+    padding: 1rem
+    box-sizing: border-box
+    background: var(--gray-xs)
+    border-radius: 30px
+  &__conetnt
+    display: flex
+    flex-flow: column
+    justify-content: space-between
+    padding-block: 2rem
+  &__txt
+    line-height: 1.1
+    opacity: 0.6
+    color: #1f2023
+  &__filling
+    position: absolute
+    bottom: 0
+    left: 0
+    width: min(254px, 70%)
+  &__holder
+    +fs(22px)
+    font-weight: 600
+    line-height: 1.05
+    font-family: var(--second-family)
+    margin-bottom: 1rem
+  &__pic
+    pointer-events: none
+  .slick-slide
+    margin-right: 2.5rem

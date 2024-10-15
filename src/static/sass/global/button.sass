@@ -1,0 +1,64 @@
+.btn
+  display: inline-block
+  font-weight: 500
+  +fs(16px)
+  border-radius: 12px
+  color: var(--black)
+  border: 1px solid transparent
+  padding: 1.6rem 2.5rem
+  cursor: pointer
+  line-height: .875
+  transition: .5s ease
+  &_orange
+    background: var(--yellow)
+  &_blue
+    background: var(--lazur)
+    color: var(--white)
+    &:hover
+      background: var(--lazur-hover)
+  &_transparent
+    border-color: var(--yellow)
+    background: none
+  &_transparent-white
+    border-color: var(--white)
+    color: var(--white)
+    background: none
+  &_gray
+    background: var(--gray-xs)
+    &.active
+      color: var(--white)
+      background: var(--lazur)
+    &:hover
+      color: var(--white)
+      background: #0098c7
+  &_icon
+    display: inline-flex
+    align-items: center
+    gap: 1rem
+    padding: 1.6rem 2rem
+    line-height: 1
+  &_cl-white
+    color: var(--white)
+
+.slider-arrows
+  border-radius: 100px
+  width: 102px
+  height: 56px
+  background: var(--gray-xs)
+  display: flex
+  align-items: center
+  justify-content: center
+  .slider-arrow
+    width: 46px
+    height: 46px
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: .5s ease
+    border-radius: 100%
+    svg
+      vertical-align: middle
+    &:hover
+      background: var(--lazur)
+      path
+        fill: var(--white)

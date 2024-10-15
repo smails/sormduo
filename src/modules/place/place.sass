@@ -1,0 +1,41 @@
+.place
+  &__title
+    margin-bottom: 3.8rem
+  &__row
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 2.5rem
+  &__outer-slider
+    position: relative
+    &:before
+      content: attr(data-sign)
+      border-radius: 12px
+      padding: 1.7rem 2rem
+      background: var(--lazur)
+      color: var(--white)
+      +fs(18px)
+      font-weight: 500
+      position: absolute
+      top: 1.5rem
+      left: 1.5rem
+      line-height: 1.1
+      z-index: 3
+    .slider-arrows
+      position: absolute
+      top: 69%
+      right: 1.5rem
+  &__pic
+    width: 100%
+    border-radius: 30px
+  &__slider
+    width: 100%
+    max-width: 608px
+  &__caption
+    font-weight: 600
+    line-height: 1.05
+    font-family: var(--second-family)
+    margin: 2.6rem 0 1.5rem
+    +fs(22px)
+  &__txt
+    line-height: 1.1
+    color: var(--black-60)

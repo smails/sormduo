@@ -1,0 +1,105 @@
+.finished
+  margin: 7rem 0 14rem
+  background-image: url(../icon/finished-bg.svg)
+  background-repeat: no-repeat
+  background-position: left 100%
+  background-repeat: no-repeat
+  &__inner
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    gap: 2rem
+  &__left
+    max-width: 435px
+  &__title
+    margin-bottom: 3rem
+  &__txt
+    line-height: 1.15
+    color: var(--black-60)
+    +fs(18px)
+  &__call
+    margin-top: 3.5rem
+  &__right
+    position: relative
+    width: 60%
+    max-width: 715px
+    .slider-arrows
+      position: absolute
+      bottom: 2rem
+      right: 2rem
+    .slick-slide
+      margin-right: 2.5rem
+  &__nav
+    position: absolute
+    top: 2rem
+    left: 2rem
+    z-index: 2
+  &__slide
+    position: relative
+  &__pic
+    border-radius: 40px
+    vertical-align: middle
+    max-width: 100%
+  &__view
+    position: absolute
+    z-index: 2
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.03)
+    background-color: var(--white)
+    width: 54px
+    height: 54px
+    border-radius: 100%
+    transition: .5s ease
+    display: flex
+    justify-content: center
+    align-items: center
+    &:before
+      content: ''
+      width: 100%
+      height: 100%
+      border-radius: 100%
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      animation: pulse-animation 3s infinite 1s
+      z-index: -1
+      transition: .5s ease
+    &:after
+      content: attr(data-sign)
+      box-shadow: 0 9px 24px 0 rgba(0, 0, 0, 0.07)
+      background: var(--white)
+      position: absolute
+      bottom: calc(100% + 20px)
+      left: 50%
+      transform: translateX(-50%)
+      padding: 1rem 1.5rem
+      box-sizing: border-box
+      z-index: 1
+      border-radius: 10px
+      width: 182px
+      +fs(14px)
+      line-height: 1
+      font-weight: 500
+      opacity: 0
+      visibility: hidden
+      transition: .5s ease
+    path
+      transition: .5s ease
+    &:hover
+      background: var(--lazur-hover)
+      &:before
+        box-shadow: 0 0 0 10px rgba(#0098c7, .2)
+        animation: none
+      &:after
+        opacity: 1
+        visibility: visible
+      path
+        fill: var(--white)
+
+@keyframes pulse-animation
+  0%, 100%
+    box-shadow: 0 0 0 0px var(--white-20)
+    opacity: 0
+  50%
+    box-shadow: 0 0 0 10px var(--white-20)
+    opacity: 1

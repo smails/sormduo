@@ -1,0 +1,145 @@
+.plane
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 3.8rem
+  &__btn
+    padding: 1.9rem 1.5rem
+    +fs(18px)
+  &__box
+    padding: 5rem
+    box-sizing: border-box
+    background: var(--gray-xs)
+    border-radius: 40px
+    display: none
+    &:first-of-type
+      display: block
+  &__more
+    margin-top: 1.5rem
+    width: 100%
+    display: block
+    text-align: center
+    padding: 2rem
+.plane-item
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 4rem
+  &__control
+    display: flex
+    justify-content: flex-end
+    gap: .5rem
+    max-width: 665px
+    width: 60%
+    align-items: center
+    &::before
+      content: 'Тип'
+      font-weight: 500
+      +fs(18px)
+      padding-right: 1rem
+  &__btn
+    background: var(--white)
+    flex-grow: 1
+    &:hover
+      background: var(--lazur-hover)
+      color: var(--white)
+    &.active
+      background: var(--lazur)
+      color: var(--white)
+  &__item
+    display: inline-flex
+    align-items: center
+    padding: 0.5rem 2rem 0.5rem .5rem
+    box-sizing: border-box
+    background: var(--white)
+    gap: 1rem
+    margin-bottom: 0.5rem
+    border-radius: 100px
+  &__icon
+    flex-shrink: 0
+    vertical-align: middle
+  &__txt
+    line-height: 1.1
+    font-weight: 500
+  &__box
+    display: none
+    &:first-of-type
+      display: block
+  &__row
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    gap: min(80px, 5vw)
+    position: relative
+  &__left
+    width: 40%
+    max-width: 396px
+    flex-shrink: 0
+  &__right
+    border-radius: 40px
+    background: var(--white)
+    max-width: 665px
+    width: 60%
+    position: relative
+    padding-block: 3rem
+  &__dispatch
+    display: flex
+    gap: 1rem
+    margin-top: 4.5rem
+  &__more, &__all
+    +fs(14px)
+    padding: 1.7rem 2.3rem
+  &__coordination
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    padding: 2rem
+    box-sizing: border-box
+    z-index: 2
+  &__view
+    border-radius: 100px
+    background: var(--gray-xs)
+    width: 56px
+    height: 56px
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+  &__sq
+    border-radius: 12px
+    padding: 1.5rem 2rem
+    background: var(--cian)
+    color: var(--white)
+    +fs(18px)
+    font-weight: 500
+    display: inline-block
+    position: absolute
+    top: 2rem
+    right: 2rem
+    line-height: 1
+    z-index: 2
+  &__pic
+    margin: 0 auto
+    transform: scale(.3)
+    opacity: 0.5
+    transition: .5s ease
+  &__rq
+    position: absolute
+    bottom: 0
+    right: 0
+    +fs(12px)
+    line-height: 110%
+    color: rgba(31, 32, 35, 0.5)
+    max-width: 665px
+    width: 60%
+ 
+  .slick-current
+    .plane-item__pic
+      opacity: 1
+      transform: scale(1)

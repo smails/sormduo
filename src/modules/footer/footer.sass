@@ -1,0 +1,88 @@
+.footer
+  margin-top: 4.2rem
+  padding-bottom: 2rem
+  &__inner
+    display: flex
+    align-items: flex-start
+    position: relative
+    padding-block: 5rem 3rem
+    gap: 5rem
+    &:before
+      content: ''
+      width: calc(100% + 10rem)
+      height: 100%
+      position: absolute
+      top: 0
+      left: -5rem
+      background: var(--gray-xs)
+      border-radius: 40px
+      z-index: -1
+  &__home
+    display: inline-block
+    margin-bottom: 3rem
+  &__box
+    margin-bottom: 2.5rem
+  &__caption
+    +fs(16px)
+    font-weight: 600
+    line-height: 1.1
+    margin-bottom: 1.2rem
+  &__txt
+    +fs(16px)
+    line-height: 1.15
+    color: var(--black-60)
+    margin-bottom: 1rem
+  &__mail
+    +fs(16px)
+    font-weight: 500
+    color: var(--lazur)
+  &__social
+    margin-top: 5rem
+    display: flex
+    gap: 1rem
+  &__left
+    max-width: 271px
+  &__right
+    flex-grow: 1
+    text-align: right
+    width: 40%
+  &__middle
+    display: flex
+    gap: 3.5rem
+    width: 40%
+  &__item
+    margin-bottom: 3.5rem
+  &__link
+    display: block
+    line-height: 1.1
+    margin-bottom: 1rem
+    color: var(--black-60)
+    &_bold
+      margin-bottom: 2rem
+      +fs(18px)
+      font-weight: 600
+      color: var(--black)
+  &__up
+    position: absolute
+    top: -2.25rem
+    right: 0
+  &__phone
+    display: block
+    margin-bottom: 3rem
+  &__info
+    margin-top: 8rem
+  &__polit
+    +fs(14px)
+    color: rgba(31, 32, 35, 0.5)
+    margin-bottom: 1rem
+  &__work
+    color: rgba(31, 32, 35, 0.5)
+    margin-bottom: 4rem
+    a
+      color: var(--black)
+      font-weight: 700
+  &__copy
+    +fs(14px)
+    line-height: 1.1
+    color: rgba(31, 32, 35, 0.5)
+    margin-bottom: 1.5rem

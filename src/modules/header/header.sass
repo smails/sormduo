@@ -1,0 +1,61 @@
+.header
+  padding-block: 2rem
+  &__inner
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__nav
+    display: flex
+    align-items: center
+    gap: 2rem
+  &__open-nav
+    background: var(--gray-xs)
+    border-radius: 10px
+    padding: 1.5rem 1.2rem
+    display: inline-flex
+    align-items: center
+    gap: .8rem
+    font-weight: 500
+    +fs(14px)
+  &__list
+    display: flex
+    gap: 2rem
+  &__item
+    margin-bottom: 0
+    &:has(.header__dropdown)
+      position: relative
+      padding-right: 1.2rem
+      &:after
+        content: ''
+        width: 8px
+        height: 5px
+        background-image: url("data:image/svg+xml,%3Csvg width='8' height='5' viewBox='0 0 8 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.63272 4.60241C3.83068 4.81671 4.16932 4.81671 4.36728 4.60241L6.68881 2.08928C6.98464 1.76903 6.7575 1.25 6.32154 1.25H1.67846C1.2425 1.25 1.01536 1.76904 1.31119 2.08928L3.63272 4.60241Z' fill='%23006E90'/%3E%3C/svg%3E%0A")
+        background-repeat: no-repeat
+        background-position: center
+        position: absolute
+        right: 0
+        top: 7px
+  &__link
+    font-weight: 500
+    +fs(14px)
+  &__info
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    gap: 3rem
+  &__call
+    position: relative
+    padding-right: 6rem
+  &__phone
+    font-weight: 500
+    line-height: 1
+    text-align: right
+    margin-bottom: 0.6rem
+    display: block
+  &__sign
+    +fs(12px)
+    text-align: right
+  &__open-modal
+    position: absolute
+    right: 0
+    top: 0

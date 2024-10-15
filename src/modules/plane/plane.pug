@@ -1,0 +1,59 @@
++b.plane
+  +e.inner.inner
+    +e.head
+      +e.H2.title Виды планировок
+      +e.control
+        +e.BUTTON.btn.btn_gray.active Студия
+        +e.BUTTON.btn.btn_gray 1-к
+        +e.BUTTON.btn.btn_gray 2-к
+        +e.BUTTON.btn.btn_gray 3-к
+        +e.BUTTON.btn.btn_gray 4-к
+    +e.body
+      - for (var i = 0; i< 5; i++){
+        +e.box
+          +b.plane-item
+            +e.head
+              +e.H3.title Квартира - студия #{i}
+              +e.control
+                +e.BUTTON.btn.btn.active 1
+                +e.BUTTON.btn.btn 2
+                +e.BUTTON.btn.btn 3
+                +e.BUTTON.btn.btn 4
+                +e.BUTTON.btn.btn 5
+                +e.BUTTON.btn.btn 6
+                +e.BUTTON.btn.btn 7
+            +e.body
+              - for (var i = 0; i< 5; i++){
+                +e.box
+                  +e.row
+                    +e.left
+                      +e.list
+                        each item, index in ['Свободная планировка','Высота потолков 3 - 3,3 м','Тёплая лоджия','Дополнительный санузел','Окна на 2 стороны ','Мастер-спальня','Окна увеличенного размера','Гардеробная']
+                          +e.item
+                            +e.IMG.icon(src='/icon/plane-' + index + '.svg' alt='')
+                            +e.P.txt=item
+                      +e.dispatch
+                        +e.A.more.btn_blue(href='#') Похожие планировки
+                        +e.A.all.btn_transparent(href="#") Все типы квартир
+                        +e.rq Все квартиры в ЖК Сормовский дуэт свободной планировки и сдаются без отделки. Представленное разделение на комнаты и расстановка перегородок - носит условный характер и является одним из возможных способов зонирования пространства.
+                    +e.right
+                      +e.sq 103,7 - 106,3 м2
+                      +e.slider
+                        +e.slide
+                          +e.IMG.pic(src='/img/plane-1.png' alt='')
+                        +e.slide
+                          +e.IMG.pic(src='/img/plane-1.png' alt='')
+                        +e.slide
+                          +e.IMG.pic(src='/img/plane-1.png' alt='')
+                        +e.slide
+                          +e.IMG.pic(src='/img/plane-1.png' alt='')
+                        +e.slide
+                          +e.IMG.pic(src='/img/plane-1.png' alt='')
+                      +e.coordination
+                        +e.view
+                          svg(xmlns='http://www.w3.org/2000/svg' width='30' height='29' fill='none')
+                            path(fill='#006E90' d='M24.0391 5.25075c.6076-.04362 1.1127.46147 1.0691 1.06904l-.329 4.58191c-.0613.8545-1.0987 1.2413-1.7045.6354l-4.2529-4.25285c-.6058-.60582-.2191-1.64319.6355-1.70454l4.5818-.32896ZM6.06388 5.25075c-.60757-.04362-1.11267.46147-1.06904 1.06904l.32896 4.58191c.06135.8545 1.09872 1.2413 1.70454.6354l4.25286-4.25285c.6058-.60582.2191-1.64319-.6355-1.70454l-4.58182-.32896ZM23.1427 24.6534c.6075.0436 1.1126-.4614 1.069-1.069l-.329-4.5819c-.0613-.8545-1.0987-1.2413-1.7045-.6355l-4.2529 4.2529c-.6058.6058-.219 1.6432.6355 1.7046l4.5819.3289ZM5.96085 24.6535c-.60757.0437-1.11266-.4614-1.06904-1.069l.32896-4.5819c.06135-.8545 1.09872-1.2413 1.70454-.6354L11.1782 22.62c.6058.6059.2191 1.6432-.6355 1.7046l-4.58185.3289Z')
+                        +b.slider-arrows
+              - }
+      - }
+        +e.A.more.btn_orange(href="#") Оставить заявку

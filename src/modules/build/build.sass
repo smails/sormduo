@@ -1,0 +1,41 @@
+.build
+  &__title
+    margin-bottom: 5rem
+  &__list
+    display: flex
+    gap: 3rem
+  &__item
+    position: relative
+  &__sign
+    backdrop-filter: blur(12px)
+    padding: 1.2rem 1.5rem 1.2rem 4.5rem
+    border-radius: 100px
+    font-weight: 500
+    +fs(14px)
+    color: var(--white)
+    position: absolute
+    top: 1rem
+    left: 1rem
+    &_photo
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none'%3E%3Crect width='32' height='32' fill='%23006E90' rx='16'/%3E%3Cpath fill='%23fff' d='M16.0005 18.1334c1.1782 0 2.1334-.9552 2.1334-2.1334s-.9552-2.1333-2.1334-2.1333-2.1333.9551-2.1333 2.1333c0 1.1782.9551 2.1334 2.1333 2.1334Z'/%3E%3Cpath fill='%23fff' d='m14.0026 9.3335-1.22 1.3333h-2.1133c-.73336 0-1.33336.6-1.33336 1.3334v8c0 .7333.6 1.3333 1.33336 1.3333h10.6666c.7334 0 1.3334-.6 1.3334-1.3333v-8c0-.7334-.6-1.3334-1.3334-1.3334h-2.1133l-1.22-1.3333h-4Zm2 10c-1.84 0-3.3333-1.4933-3.3333-3.3333 0-1.84 1.4933-3.3334 3.3333-3.3334 1.84 0 3.3333 1.4934 3.3333 3.3334s-1.4933 3.3333-3.3333 3.3333Z'/%3E%3C/svg%3E")
+      background-color: var(--blur)
+      background-position: 5px center
+      background-repeat: no-repeat
+    &_video
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none'%3E%3Crect width='32' height='32' fill='%23006E90' rx='16'/%3E%3Cpath fill='%23fff' d='M17.0503 11.2998H9.75055C8.78775 11.2998 8 12.0876 8 13.0504v5.8993c0 .9628.78775 1.7505 1.75055 1.7505h7.29975c.9628 0 1.7506-.7877 1.7506-1.7505v-5.8993c0-.9804-.7878-1.7506-1.7506-1.7506Zm5.6543.9628c-.105.0175-.2101.07-.2976.1225l-2.7309 1.5755v4.0613l2.7484 1.5755c.5077.2976 1.1379.1225 1.4355-.3851.0875-.1576.14-.3326.14-.5252v-5.4092c0-.6477-.6127-1.1728-1.2954-1.0153Z'/%3E%3C/svg%3E")
+      background-color: var(--blur)
+      background-position: 5px center
+      background-repeat: no-repeat
+  &__pic
+    max-width: 100%
+    vertical-align: middle
+    border-radius: 30px
+  &__caption
+    margin-top: 2rem
+    +fs(22px)
+    font-weight: 600
+    font-family: var(--second-family)
+    margin-bottom: 1.2rem
+  &__date
+    +fs(18px)
+    color: rgba(31, 32, 35, 0.5)
