@@ -5,9 +5,10 @@ body
   font-weight: 400
   font-family: var(--font-family)
   color: var(--black)
+
 .inner
   width: 100%
-  padding-inline: 1rem
+  padding-inline: 1.5rem
   margin: 0 auto
   box-sizing: border-box
   max-width: 1262px
@@ -16,6 +17,10 @@ body
 
 .section
   margin: 11rem 0
+  +screen('max', 1023)
+    margin: 7.5rem 0
+  +screen('max', 767)
+    margin: 5rem 0
 
 .slick-slide
   height: auto

@@ -1,10 +1,17 @@
 .banner
+  &__inner
+    +screen('max', 600)
+      padding: 0
   &__container
     position: relative
   &__videos
     position: absolute
     top: 2rem
     right: 2rem
+    +screen('max', 600)
+      top: 1rem
+      left: 1.5rem
+      right: auto
   &__video
     padding: 2rem
     display: flex
@@ -16,6 +23,11 @@
     margin-bottom: .5rem
     font-weight: 500
     box-sizing: border-box
+    +screen('max', 600)
+      +fs(12px)
+      padding: 0.8rem 1rem
+      text-wrap: balance
+      max-width: 203px
     svg
       flex-shrink: 0
     &_blue
@@ -43,15 +55,27 @@
     line-height: 1.05
     font-weight: 600
     margin-bottom: 4rem
+    +screen('max', 600)
+      +fs(20px)
+      margin-bottom: 2rem
+      max-width: calc(100% - 3rem)
   &__pic
     width: 100%
     vertical-align: middle
     border-radius: 40px
+    +screen('max', 1023)
+      height: 500px
+      object-fit: cover
   &__content
     position: absolute
     bottom: 3rem
     left: 6rem
+    +screen('max', 600)
+      left: 1.5rem
+      bottom: 2rem
   .slider-arrows
     position: absolute
     bottom: 3rem
     right: 6rem
+    +screen('max', 600)
+      display: none

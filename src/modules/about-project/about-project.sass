@@ -3,17 +3,30 @@
   background-image: url(../icon/about-bg.svg)
   background-repeat: no-repeat
   background-position: right 163%
-  background-repeat: no-repeat
+  +screen('max', 1023)
+    background-position: right 150%
+  +screen('max', 600)
+    background-position: 90% 25%
+    background-size: 150px
   &__head
     display: flex
     justify-content: space-between
     align-items: flex-start
+    gap: 5rem
+    +screen('max', 600)
+      flex-flow: column
+      gap: 3rem
   &__title
     text-align: right
     max-width: 878px
     position: relative
+    +screen('max', 600)
+      text-align: left
+      padding-top: 3rem
     svg
       padding-inline: 2.5rem
+      +screen('max', 600)
+        display: none
     &:before
       content: attr(data-sign)
       position: absolute
@@ -27,22 +40,41 @@
     text-align: right
     line-height: 1.1
     margin-top: 1rem
+    flex-shrink: 0
+    +screen('max', 600)
+      width: 100%
+      display: flex
+      flex-wrap: wrap
+      gap: 2rem
+      margin-bottom: 3rem
   &__item
     margin-bottom: 3.5rem
+    +screen('max', 600)
+      margin-bottom: 0
     span
       color: var(--black-60)
+      +screen('max', 600)
+        +fs(12px)
     p
       margin-top: 1rem
       +fs(28px)
       font-weight: 600
       letter-spacing: -0.01em
       font-family: var(--second-family)
+      +screen('max', 600)
+        +fs(20px)
   &__foot
     display: flex
     align-items: center
     gap: 6rem
+    +screen('max', 1023)
+      flex-flow: column
+      gap: 3rem
+      align-items: flex-start
   &__video
     position: relative
+    +screen('max', 600)
+      order: 1
   &__play
     position: absolute
     top: 50%
@@ -57,3 +89,9 @@
     margin-bottom: 3.5rem
   &__more
     padding: 2rem 2.5rem
+    +screen('max', 600)
+      width: 100%
+      text-align: center
+  &__pic
+    +screen('max', 600)
+      width: 100%

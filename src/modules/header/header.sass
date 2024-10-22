@@ -4,10 +4,16 @@
     display: flex
     justify-content: space-between
     align-items: center
+    gap: 2rem
   &__nav
     display: flex
     align-items: center
     gap: 2rem
+    +screen('max', 1200)
+      flex-grow: 1
+    +screen('max', 600)
+      order: 1
+      flex-grow: 0
   &__open-nav
     background: var(--gray-xs)
     border-radius: 10px
@@ -20,6 +26,8 @@
   &__list
     display: flex
     gap: 2rem
+    +screen('max', 1200)
+      display: none
   &__item
     margin-bottom: 0
     &:has(.header__dropdown)
@@ -43,19 +51,35 @@
     align-items: center
     justify-content: flex-end
     gap: 3rem
+    +screen('max', 600)
+      flex-grow: 1
   &__call
     position: relative
     padding-right: 6rem
+    +screen('max', 600)
+      padding-right: 0
   &__phone
     font-weight: 500
     line-height: 1
     text-align: right
     margin-bottom: 0.6rem
     display: block
+    +screen('max', 600)
+      display: none
   &__sign
     +fs(12px)
     text-align: right
+    +screen('max', 600)
+      display: none
   &__open-modal
     position: absolute
     right: 0
     top: 0
+    +screen('max', 600)
+      position: relative
+  &__btn
+    +screen('max', 1023)
+      display: none
+  &__icon
+    +screen('max', 600)
+      width: 125px

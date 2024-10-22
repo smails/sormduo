@@ -1,6 +1,8 @@
 .selection
   &__container
     position: relative
+    +screen('max', 600)
+      overflow: hidden
     &:before
       content: ''
       width: 100%
@@ -13,6 +15,9 @@
   &__pic
     width: 100%
     vertical-align: middle
+    object-fit: cover
+    +screen('max', 1023)
+      height: 600px
   &__info
     position: absolute
     bottom: 0
@@ -34,6 +39,8 @@
     letter-spacing: -0.04em
     color: var(--white)
     max-width: 818px
+    +screen('max', 1023)
+      +fs(48px)
     span
       text-align: right
       display: block

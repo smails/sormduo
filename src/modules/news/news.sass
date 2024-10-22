@@ -10,6 +10,11 @@
     display: flex
     align-items: center
     gap: 5rem
+    +screen('max', 1023)
+      justify-content: space-between
+      width: 100%
+    +screen('max', 600)
+      flex-wrap: wrap
   &__all
     +fs(14px)
     padding: 1.7rem 2rem
@@ -32,6 +37,8 @@
     align-items: center
     justify-content: flex-end
     gap: 3rem
+    +screen('max', 1023)
+      display: none
   &__top
     position: relative
   &__sign
@@ -76,6 +83,9 @@
   &__caption
     +fs(22px)
     margin-bottom: 1rem
+  &__pic
+    +screen('max', 1200)
+      width: 100%
   &__txt
     line-height: 1.1
     color: var(--black-60)

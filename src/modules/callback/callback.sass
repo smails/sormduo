@@ -1,5 +1,9 @@
 .callback
   padding-bottom: 11rem
+  +screen('max', 1023)
+    padding-bottom: 7rem
+  +screen('max', 767)
+    padding-bottom: 5rem
   &__box
     border-radius: 15px
     padding: 2rem 4rem
@@ -21,6 +25,9 @@
     justify-content: space-between
     align-items: center
     gap: 5rem
+    +screen('max', 1023)
+      flex-wrap: wrap
+      gap: 3rem
   &__info
     max-width: 365px
     width: 40%
@@ -36,6 +43,8 @@
     gap: 2.4rem
     grid-template-columns: repeat(3, min(240px, 31%))
     width: 100%
+    +screen('max', 600)
+      grid-template-columns: 1fr
   &__field
     +fs(16px)
     background: var(--white)
@@ -51,3 +60,5 @@
     color: rgba(31, 32, 35, 0.5)
     a
       color: var(--lazur)
+  &__btn
+    flex-shrink: 0

@@ -9,6 +9,9 @@
   cursor: pointer
   line-height: .875
   transition: .5s ease
+  box-sizing: border-box
+  +screen('max', 600)
+    +fs(14px)
   &_orange
     background: var(--yellow)
   &_blue

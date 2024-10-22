@@ -7,6 +7,8 @@
     margin-bottom: 4rem
   &__slider
     margin-left: calc((100% - 1240px) / 2)
+    +screen('max', 1240)
+      margin-left: 1rem
   &__slide
     position: relative
     &::before
@@ -31,6 +33,9 @@
     font-weight: 500
     +fs(18px)
     line-height: 1.1
+    padding: 1rem 1rem 1rem 0
+    background: var(--white)
+    border-radius: 30px
   .slick-slide
     margin-right: 2.5rem
 

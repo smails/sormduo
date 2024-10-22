@@ -1,13 +1,24 @@
 .docs
+  +screen('max', 1023)
+    padding-top: 3rem
   &__title
     margin-bottom: 4rem
+    +screen('max', 1023)
+      margin-bottom: 3rem
   &__list
     display: flex
     gap: 2.6rem
+    +screen('max', 1023)
+      flex-wrap: wrap
   &__item
     background: var(--gray-xs)
     padding: 3rem 2.5rem
     border-radius: 30px
+    box-sizing: border-box
+    +screen('max', 1200)
+      padding: 3rem 1.5rem
+    +screen('max', 1023)
+      width: calc(50% - 1.6rem)
   &__sign
     margin-bottom: 1.5rem
     line-height: 1.1

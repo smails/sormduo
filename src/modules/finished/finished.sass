@@ -4,11 +4,21 @@
   background-repeat: no-repeat
   background-position: left 100%
   background-repeat: no-repeat
+  +screen('max', 1200)
+    background-position: right 100%
+    margin-top: 0
+  +screen('max', 1023)
+    margin: 7rem 0
+  +screen('max', 1023)
+    margin: 5rem 0
   &__inner
     display: flex
     justify-content: space-between
     align-items: flex-start
     gap: 2rem
+    +screen('max', 1200)
+      flex-flow: column
+      gap: 4rem
   &__left
     max-width: 435px
   &__title
@@ -23,6 +33,8 @@
     position: relative
     width: 60%
     max-width: 715px
+    +screen('max', 1200)
+      width: 100%
     .slider-arrows
       position: absolute
       bottom: 2rem

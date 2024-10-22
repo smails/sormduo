@@ -1,10 +1,16 @@
 .place
   &__title
     margin-bottom: 3.8rem
+    +screen('max', 600)
+      margin-bottom: 2rem
   &__row
     display: grid
     grid-template-columns: repeat(2, 1fr)
     gap: 2.5rem
+    +screen('max', 1200)
+      grid-template-columns: repeat(2, 48vw)
+    +screen('max', 1023)
+      grid-template-columns: 1fr
   &__outer-slider
     position: relative
     &:before
@@ -20,16 +26,27 @@
       left: 1.5rem
       line-height: 1.1
       z-index: 3
+      +screen('max', 600)
+        +fs(12px)
+        padding: 1rem 1.1rem
     .slider-arrows
       position: absolute
       top: 69%
       right: 1.5rem
+      +screen('max', 1200)
+        top: 64%
+      +screen('max', 1023)
+        top: 75%
+      +screen('max', 600)
+        display: none
   &__pic
     width: 100%
     border-radius: 30px
   &__slider
     width: 100%
     max-width: 608px
+    +screen('max', 1023)
+      max-width: calc(100vw - 3rem)
   &__caption
     font-weight: 600
     line-height: 1.05

@@ -13,6 +13,9 @@
       background-repeat: no-repeat
       background-size: cover
       z-index: -1
+      +screen('max', 1200)
+        width: 100%
+        left: 0
   &__info
     border-radius: 30px
     background: var(--white)
@@ -20,6 +23,8 @@
     box-sizing: border-box
     max-width: 416px
     position: relative
+    +screen('max', 1200)
+      margin-left: 2rem
   &__title
     margin-bottom: 3rem
   &__box
