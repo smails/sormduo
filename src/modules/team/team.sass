@@ -4,6 +4,9 @@
   +screen('max', 1023)
     margin-top: 7.5rem
     margin-bottom: 4rem
+  +screen('max', 600)
+    margin-top: 5rem
+    display: none
   &__inner
     display: flex
     justify-content: space-between
@@ -55,6 +58,8 @@
 
 .numbs
   margin-bottom: 11rem
+  +screen('max', 600)
+    display: none
   &__inner
     display: flex
     justify-content: space-between
@@ -67,3 +72,55 @@
     +fs(18px)
     line-height: 1.1
     margin-top: 1rem
+
+.team-mobile
+  margin: 5rem 0
+  +screen('min', 600)
+    display: none
+  &__title
+    margin-bottom: 2.5rem
+  &__box
+    display: flex
+    align-items: center
+    gap: 3.2rem
+    justify-content: space-between
+    margin-bottom: 3rem
+  &__btn
+    padding: 2rem
+  &__caption
+    margin-bottom: 2rem
+    +fs(20px)
+    font-weight: 600
+    line-height: 1.05
+  &__txt
+    line-height: 1.1
+    color: var(--black-60)
+  &__video
+    position: relative
+  &__preview
+    max-width: 100%
+    vertical-align: middle
+    object-fit: cover
+    border-radius: 20px
+    height: 170px
+  &__play
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+  &__icons
+    margin-top: 3rem
+    max-width: 100%
+  &__numbs
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 1.5rem
+    margin: 3rem 0
+  &__meaning
+    +fs(28px)
+    font-weight: 600
+    letter-spacing: -0.01em
+    font-family: var(--second-family)
+  &__sign
+    font-weight: 500
+    +fs(14px)

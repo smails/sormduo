@@ -4,9 +4,16 @@
     justify-content: space-between
     align-items: center
     margin-bottom: 3.8rem
+    +screen('max', 600)
+      flex-flow: column
+      gap: 3rem
+      align-items: flex-start
+      margin-bottom: 2rem
   &__btn
     padding: 1.9rem 1.5rem
     +fs(18px)
+    +screen('max', 600)
+      +fs(14px)
   &__box
     padding: 5rem
     box-sizing: border-box
@@ -15,6 +22,9 @@
     display: none
     +screen('max', 1200)
       padding: 4rem
+    +screen('max', 600)
+      padding: 2rem 1.5rem
+      border-radius: 20px
     &:first-of-type
       display: block
   &__more
@@ -23,6 +33,14 @@
     display: block
     text-align: center
     padding: 2rem
+    +screen('max', 600)
+      width: calc(100% - 3rem)
+      margin-left: 1.5rem
+  &__body
+    +screen('max', 600)
+      width: 100vw
+      position: relative
+      left: -1.5rem
 
 .plane-item
   &__head
@@ -43,11 +61,26 @@
     align-items: center
     +screen('max', 1023)
       width: 100%
+    +screen('max', 600)
+      justify-content: flex-start
+      overflow: auto
+      scrollbar-width: 0
+      display: flex
+      gap: .5rem
+      padding-top: 3rem
+      position: relative
+    &::-webkit-scrollbar
+      height: 0
     &::before
       content: 'Тип'
       font-weight: 500
       +fs(18px)
       padding-right: 1rem
+      +screen('max', 600)
+        position: absolute
+        top: 0
+        left: 0
+        +fs(14px)
   &__btn
     background: var(--white)
     flex-grow: 1
@@ -66,12 +99,18 @@
     gap: 1rem
     margin-bottom: 0.5rem
     border-radius: 100px
+    +screen('max', 600)
+      margin-bottom: 0
   &__icon
     flex-shrink: 0
     vertical-align: middle
+    +screen('max', 600)
+      width: 30px
   &__txt
     line-height: 1.1
     font-weight: 500
+    +screen('max', 600)
+      +fs(12px)
   &__box
     display: none
     &:first-of-type
@@ -101,6 +140,7 @@
     padding-block: 3rem
     +screen('max', 1023)
       width: 100%
+      padding-block: 4rem
   &__dispatch
     display: flex
     gap: 1rem
@@ -108,11 +148,15 @@
     +screen('max', 1200)
       flex-flow: column
       align-items: flex-start
+    +screen('max', 600)
+      margin-top: 3rem
   &__more, &__all
     +fs(14px)
     padding: 1.7rem 2.3rem
     +screen('max', 1200)
       width: 220px
+    +screen('max', 600)
+      width: 100%
   &__coordination
     display: flex
     justify-content: space-between
@@ -124,6 +168,8 @@
     padding: 2rem
     box-sizing: border-box
     z-index: 2
+    +screen('max', 600)
+      padding: 1rem
   &__view
     border-radius: 100px
     background: var(--gray-xs)
@@ -133,6 +179,12 @@
     justify-content: center
     align-items: center
     cursor: pointer
+    +screen('max', 600)
+      width: 40px
+      height: 40px
+    svg
+      +screen('max', 600)
+        transform: scale(.7)
   &__sq
     border-radius: 12px
     padding: 1.5rem 2rem
@@ -148,6 +200,13 @@
     z-index: 2
     +screen('max', 1200)
       +fs(14px)
+    +screen('max', 600)
+      font-weight: 500
+      padding: 1.2rem
+      left: 1rem
+      top: 0.5rem
+      right: auto
+      border-radius: 10px
   &__pic
     margin: 0 auto
     transform: scale(.3)
@@ -157,6 +216,9 @@
       width: 100%
       height: 390px
       object-fit: contain
+    +screen('max', 600)
+      transform: scale(.6)
+      height: 240px
   &__rq
     position: absolute
     bottom: 0
@@ -168,7 +230,20 @@
     width: 60%
     +screen('max', 1200)
       width: 55%
+    +screen('max', 600)
+      width: 100%
+      position: relative
+  &__list
+    +screen('max', 600)
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      gap: .8rem 1.5rem
   .slick-current
     .plane-item__pic
       opacity: 1
       transform: scale(1)
+  .slider-arrows
+    +screen('max', 600)
+      display: none
+  .slick-dots
+    bottom: -2.5rem

@@ -1,6 +1,8 @@
 .docs
   +screen('max', 1023)
     padding-top: 3rem
+  +screen('max', 600)
+    padding-top: 0
   &__title
     margin-bottom: 4rem
     +screen('max', 1023)
@@ -10,34 +12,69 @@
     gap: 2.6rem
     +screen('max', 1023)
       flex-wrap: wrap
+    +screen('max', 600)
+      gap: 1rem
   &__item
     background: var(--gray-xs)
     padding: 3rem 2.5rem
     border-radius: 30px
     box-sizing: border-box
+    position: relative
     +screen('max', 1200)
       padding: 3rem 1.5rem
     +screen('max', 1023)
       width: calc(50% - 1.6rem)
+    +screen('max', 600)
+      width: 100%
+      padding: 2rem 1.5rem
+      border-radius: 15px
   &__sign
     margin-bottom: 1.5rem
     line-height: 1.1
     color: var(--black-60)
+    +screen('max', 600)
+      +fs(14px)
+      margin-bottom: 0.8rem
   &__txt
     font-weight: 600
     +fs(18px)
     line-height: 1.05
     font-family: var(--second-family)
     margin-bottom: 5.7rem
+    +screen('max', 600)
+      margin-bottom: 0
+      padding-right: 5rem
   &__download
     color: var(--black-40)
+    +screen('max', 600)
+      width: 40px
+      height: 40px
+      display: flex
+      justify-content: center
+      align-items: center
+      background: var(--white)
+      border-radius: 100%
+      position: absolute
+      right: 1.5rem
+      top: 50%
+      transform: translateY(-50%)
     svg
       margin-right: .5rem
       vertical-align: middle
+      +screen('max', 600)
+        margin-right: 0
+      path
+        +screen('max', 600)
+          stroke: var(--lazur)
+          stroke-opacity: 1
     span
       vertical-align: middle
+      +screen('max', 600)
+        display: none
   &__info
     margin-top: 4rem
     +fs(12px)
     line-height: 1.1
     color: rgba(31, 32, 35, 0.5)
+    +screen('max', 600)
+      margin-top: 3rem

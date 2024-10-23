@@ -9,13 +9,16 @@
     margin-top: 0
   +screen('max', 1023)
     margin: 7rem 0
-  +screen('max', 1023)
-    margin: 5rem 0
+  +screen('max', 600)
+    margin: 0 0 5rem
+    background-size: 120px
+    background-position: right 0%
   &__inner
     display: flex
     justify-content: space-between
     align-items: flex-start
     gap: 2rem
+    position: relative
     +screen('max', 1200)
       flex-flow: column
       gap: 4rem
@@ -23,22 +26,35 @@
     max-width: 435px
   &__title
     margin-bottom: 3rem
+    +screen('max', 600)
+      margin-bottom: 2rem
   &__txt
     line-height: 1.15
     color: var(--black-60)
     +fs(18px)
+    +screen('max', 600)
+      +fs(16px)
   &__call
     margin-top: 3.5rem
+    +screen('max', 600)
+      margin-top: 0
+      position: absolute
+      bottom: 0
+      left: 1.5rem
+      width: calc(100% - 3rem)
   &__right
     position: relative
     width: 60%
     max-width: 715px
     +screen('max', 1200)
       width: 100%
+      padding-bottom: 7rem
     .slider-arrows
       position: absolute
       bottom: 2rem
       right: 2rem
+      +screen('max', 600)
+        display: none
     .slick-slide
       margin-right: 2.5rem
   &__nav
@@ -46,12 +62,31 @@
     top: 2rem
     left: 2rem
     z-index: 2
+    +screen('max', 600)
+      position: relative
+      top: 0
+      left: 0
+      overflow: auto
+      display: flex
+      gap: 1rem
+      scrollbar-width: 0
+      margin-bottom: 2rem
+    &::-webkit-scrollbar
+      height: 0
+  &__btn
+    +screen('max', 600)
+      flex-shrink: 0
   &__slide
     position: relative
+    +screen('max', 600)
+      max-width: calc(100vw - 3rem)
   &__pic
     border-radius: 40px
     vertical-align: middle
     max-width: 100%
+    +screen('max', 600)
+      width: 100%
+      border-radius: 20px
   &__view
     position: absolute
     z-index: 2
@@ -64,6 +99,9 @@
     display: flex
     justify-content: center
     align-items: center
+    +screen('max', 600)
+      width: 34px
+      height: 34px
     &:before
       content: ''
       width: 100%
@@ -95,6 +133,8 @@
       opacity: 0
       visibility: hidden
       transition: .5s ease
+      +screen('max', 600)
+        +fs(12px)
     path
       transition: .5s ease
     &:hover
@@ -107,6 +147,9 @@
         visibility: visible
       path
         fill: var(--white)
+    svg
+      +screen('max', 600)
+        width: 15px
 
 @keyframes pulse-animation
   0%, 100%

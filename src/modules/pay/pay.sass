@@ -9,14 +9,16 @@
     gap: 2.5rem
     +screen('max', 1023)
       grid-template-columns: repeat(2, 1fr)
-    +screen('max', 600)
-      grid-template-columns: 1fr
+      gap: 1rem
   &__item
     padding: 3rem 2.5rem 8rem
     box-sizing: border-box
     background: var(--gray-xs)
     border-radius: 30px
     position: relative
+    +screen('max', 600)
+      padding: 1.5rem
+      border-radius: 15px
     &_orange
       background: var(--yellow)
       box-shadow: 0 14px 23px 0 rgba(0, 0, 0, 0.02)
@@ -35,22 +37,36 @@
     max-width: 305px
   &__caption
     margin-bottom: 1.5rem
+    +screen('max', 600)
+      +fs(18px)
+      margin-bottom: 0.8rem
   &__txt
     line-height: 1.1
     color: var(--black-60)
+    +screen('max', 600)
+      +fs(12px)
+      padding-bottom: 2rem
   &__more
     color: var(--black-40)
     display: inline-block
     position: absolute
     bottom: 3rem
     left: 2.5rem
+    +screen('max', 600)
+      bottom: 1.5rem
+      left: 1.5rem
+      +fs(12px)
   &__pic
     margin-top: -2rem
     position: absolute
     bottom: 0
     right: 2rem
+    +screen('max', 600)
+      display: none
   &__icon
     margin-right: -1rem
+    +screen('max', 600)
+      display: none
   &__row
     margin-top: 4rem
     display: flex
@@ -66,6 +82,7 @@
     box-sizing: border-box
     +screen('max', 600)
       width: 100%
+      padding: 1.5rem .5rem 1.5rem 1.5rem
     &_blue
       background: var(--lazur)
       color: var(--white)
@@ -87,12 +104,16 @@
     +screen('max', 600)
       width: 40px
       margin: 0
+      object-fit: contain
   &__holder
     font-family: var(--second-family)
     font-weight: 600
     +fs(22px)
     line-height: 1.05
     margin-bottom: 1rem
+    +screen('max', 600)
+      +fs(18px)
+      margin-bottom: 0.5rem
   &__contain
     flex-grow: 1
     width: 100%
@@ -100,5 +121,9 @@
     +fs(14px)
     font-weight: 500
     opacity: 0.7
+    +screen('max', 600)
+      +fs(12px)
   &__play
     vertical-align: middle
+    +screen('max', 600)
+      width: 60px

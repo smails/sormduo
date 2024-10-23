@@ -12,11 +12,18 @@
     justify-content: center
     align-items: center
     gap: 4rem
+    +screen('max', 600)
+      flex-wrap: wrap
+      padding: 2rem 1.5rem
+      gap: 2.5rem
   &__title
     +fs(22px)
     font-weight: 600
     line-height: 1.05
     font-family: var(--second-family)
+    +screen('max', 600)
+      +fs(18px)
+      text-align: center
   &__container
     border-radius: 15px
     padding: 3rem 4rem
@@ -28,11 +35,18 @@
     +screen('max', 1023)
       flex-wrap: wrap
       gap: 3rem
+    +screen('max', 600)
+      padding: 2rem
+      gap: 2.5rem
   &__info
     max-width: 365px
     width: 40%
+    +screen('max', 600)
+      width: 100%
   &__caption
     margin-bottom: 1.6rem
+    +screen('max', 600)
+      margin-bottom: 1rem
   &__action
     flex-grow: 1
   &__txt
@@ -45,6 +59,7 @@
     width: 100%
     +screen('max', 600)
       grid-template-columns: 1fr
+      gap: 1.5rem
   &__field
     +fs(16px)
     background: var(--white)
@@ -52,13 +67,19 @@
     padding: 2rem
     box-sizing: border-box
     border-radius: 12px
+    +screen('max', 600)
+      +fs(14px)
     &:placeholder
       color: rgba(31, 32, 35, 0.5)
   &__label
     margin-top: 2.5rem
     +fs(12px)
     color: rgba(31, 32, 35, 0.5)
+    +screen('max', 600)
+      margin-top: 2rem
     a
       color: var(--lazur)
   &__btn
     flex-shrink: 0
+    +screen('max', 600)
+      width: 100%

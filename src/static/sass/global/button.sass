@@ -10,6 +10,7 @@
   line-height: .875
   transition: .5s ease
   box-sizing: border-box
+  text-align: center
   +screen('max', 600)
     +fs(14px)
   &_orange
@@ -65,3 +66,24 @@
       background: var(--lazur)
       path
         fill: var(--white)
+
+.slick-dots
+  position: absolute
+  left: 0
+  right: 0
+  display: flex
+  justify-content: center
+  gap: 1rem
+  li
+    margin-bottom: 0
+    font-size: 0
+    width: 6px
+    height: 6px
+    border-radius: 100%
+    background: var(--lazur)
+    flex-shrink: 0
+    transition: .5s ease
+    opacity: .5
+    &.slick-active
+      transform: scale(1.2)
+      opacity: 1
