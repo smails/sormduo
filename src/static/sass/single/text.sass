@@ -1,0 +1,30 @@
+.text-box
+  padding-block: 5rem
+  +screen('max', 600)
+    padding-block: 3rem
+  &__container
+    max-width: 830px
+    font-size: 18px
+    +screen('max', 600)
+      font-size: 16px
+    p
+      margin-bottom: 1rem
+    h1
+      +fs(42px)
+      margin-bottom: 3rem
+      +screen('max', 600)
+        +fs(28px)
+    h2,h3,h4
+      margin: 4rem 0
+      &:first-child
+        margin-top: 0
+    a
+      color: var(--cian)
+      text-decoration: underline
+    ul
+      list-style: disc inside
+  &__btn
+    margin-top: 4rem
+    +screen('max', 600)
+      width: 100%
+      margin-top: 3rem

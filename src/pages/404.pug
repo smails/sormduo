@@ -1,0 +1,13 @@
+include ../static/pug/head
++head('404')
+body
+  main
+    +header()
+    +b.err-page
+      +e.inner.inner_middle
+        +e.P.title 404
+        +e.P.txt Ой, похоже, вы свернули не туда!
+        +e.P.sign Страница, которую вы ищете, не найдена.Но не волнуйтесь, давайте вернёмся на правильный путь и найдём то, что вам нужно!
+        +e.A.back.btn_orange(href="/") На главную
+    include ../modules/footer/footer
+  include ../static/pug/scripts

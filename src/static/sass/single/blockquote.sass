@@ -1,0 +1,47 @@
+.blockquote
+  margin: 9rem 0
+  text-align: center
+  +screen('max', 1023)
+    margin: 7rem 0
+  +screen('max', 600)
+    margin: 5rem 0
+  &__text
+    font-family: var(--second-family)
+    font-weight: 600
+    +fs(28px)
+    line-height: 110%
+    letter-spacing: -0.01em
+    color: #23262b
+    position: relative
+    padding-top: 7rem
+    max-width: 940px
+    display: inline-block
+    +screen('max', 600)
+      +fs(22px)
+      padding-top: 6rem
+    &:before
+      content: ''
+      display: inline-block
+      width: 34px
+      height: 28px
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='28' fill='none'%3E%3Cpath fill='%2323262B' d='M8.39375 0H15.725c-1.9833 2.42239-3.5771 5.09415-4.7812 8.01527-1.13338 2.92113-1.62922 5.37913-1.48755 7.37403L7.65 13.0382c2.19583 0 4.0375.7124 5.525 2.1374 1.4875 1.4249 2.2312 3.1705 2.2312 5.2366 0 2.1374-.7083 3.9542-2.125 5.4504C11.8646 27.2875 10.0937 28 7.96875 28c-2.26667 0-4.17917-.8193-5.7375-2.458C.74375 23.8321 0 21.6947 0 19.1298c0-1.9237.38958-4.0255 1.16875-6.3054C1.94792 10.4733 2.975 8.19338 4.25 5.98473 5.525 3.70483 6.90625 1.70992 8.39375 0ZM26.6687 0H34c-1.9833 2.42239-3.5771 5.09415-4.7813 8.01527-1.1333 2.92113-1.6291 5.37913-1.4875 7.37403l-1.8062-2.3511c2.1958 0 4.0375.7124 5.525 2.1374 1.4875 1.4249 2.2312 3.1705 2.2312 5.2366 0 2.1374-.7083 3.9542-2.125 5.4504C30.1396 27.2875 28.3687 28 26.2437 28c-2.2666 0-4.1791-.8193-5.7375-2.458-1.4875-1.7099-2.2312-3.8473-2.2312-6.4122 0-1.9237.3896-4.0255 1.1687-6.3054.7792-2.3511 1.8063-4.63102 3.0813-6.83967C23.8 3.70483 25.1812 1.70992 26.6687 0Z'/%3E%3C/svg%3E")
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      margin: 0 auto
+  &__author
+    margin-top: 4rem
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 1rem
+    +screen('max', 600)
+      margin-top: 3rem
+  &__icon
+    width: 25px
+    vertical-align: middle
+    border-radius: 100%
+  &__name
+    font-weight: 500
+    +fs(14px)

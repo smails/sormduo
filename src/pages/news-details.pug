@@ -1,0 +1,10 @@
+include ../static/pug/head
++head('Новости')
+body
+  main
+    +header()
+    include ../modules/news/details
+    include ../modules/callback/callback
+    include ../modules/news/interested
+    include ../modules/footer/footer
+  include ../static/pug/scripts

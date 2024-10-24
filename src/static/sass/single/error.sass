@@ -1,0 +1,68 @@
+.err-page
+  &__inner
+    border-radius: 40px
+    text-align: center
+    padding-block: 4rem 10rem
+    display: flex
+    flex-flow: column
+    justify-content: center
+    align-items: center
+    gap: 2rem
+    background-color: var(--lazur)
+    background-image: url(../img/bg-err-1.png)
+    background-repeat: no-repeat
+    background-position: left bottom
+    position: relative
+    z-index: 1
+    +screen('max', 1023)
+      font-size: 13px
+    +screen('max', 600)
+      padding-block: 8rem 12rem
+      border-radius: 20px
+      overflow: hidden
+      font-size: 16px
+      gap: 1rem
+    &::before
+      content: ''
+      position: absolute
+      right: 0
+      top: 4rem
+      width: min(295px, 20vw)
+      height: min(262px, 18vw)
+      background-image: url(../img/bg-nav-1.png)
+      background-repeat: no-repeat
+      background-position: center
+      background-size: contain
+      z-index: -1
+      +screen('max', 600)
+        width: 170px
+        height: 170px
+        right: -90px
+        top: -60px
+        rotate: 20deg
+  &__title
+    font-weight: 700
+    +fs(230px)
+    line-height: 1
+    letter-spacing: -0.06em
+    color: var(--white)
+    margin-bottom: 1rem
+    +screen('max', 600)
+      +fs(125px)
+  &__txt
+    font-family: var(--second-family)
+    font-weight: 500
+    +fs(42px)
+    line-height: 1
+    letter-spacing: -0.02em
+    color: var(--white)
+    +screen('max', 600)
+      +fs(28px)
+  &__sign
+    max-width: 485px
+    display: inline-block
+    +fs(18px)
+    line-height: 115%
+    color: var(--white-70)
+    +screen('max', 600)
+      +fs(16px)

@@ -6,6 +6,8 @@
     flex-wrap: wrap
     gap: 2rem
     margin-bottom: 4rem
+    +screen('max', 600)
+      margin-bottom: 2rem
   &__left
     display: flex
     align-items: center
@@ -51,46 +53,10 @@
       display: none
   &__top
     position: relative
-  &__sign
-    backdrop-filter: blur(12px)
-    padding: 1.2rem 1.5rem 1.2rem 4.5rem
-    border-radius: 100px
-    font-weight: 500
-    +fs(14px)
-    color: var(--white)
-    position: absolute
-    top: 1rem
-    left: 1rem
-    +screen('max', 600)
-      +fs(10px)
-      padding: 1.2rem 1.5rem 1.2rem 3.5rem
-
-    &_sale
-      background-color: rgba(170, 0, 0, 0.4)
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none'%3E%3Crect width='32' height='32' fill='%23E33E3E' rx='16'/%3E%3Cpath fill='%23fff' d='M14.9898 23.5059c-1.6941-.1647-3.4117-.9883-4.2588-2.4706-.82352-1.4824-.6118-3.3647-.0235-4.9883l.4941 1.4118c.0471.1412.1176.3059.2353.3765.1882.1176.447.0235.5882-.1647.1177-.1883.1412-.4236.1177-.6353-.0706-.9412-.6118-1.8118-.6353-2.753-.0236-1.0823.6588-2.0705 1.5059-2.7529.0235.3765.1176.7765.2353 1.1294.047.1412.1411.2824.2823.3059.0941 0 .1882-.0471.2588-.1177.7059-.5882 1.1294-1.4352 1.2941-2.3294.0706-.447.0706-.91761-.0235-1.36467-.0235-.09412-.2117-.56471-.1647-.6353.0706-.14117.4706.16471.5647.21177 1.553.98823 2.5883 2.7529 2.6118 4.5882 0 .2824.047.6589.3294.7059.1647.0235.3294-.0706.4235-.2117.0941-.1412.0941-.3059.1177-.4706 1.1059.9882 1.9059 2.2117 2.447 3.5764.3059.8.5177 1.6706.353 2.5177-.1412.7764-.5177 1.4823-1.0589 2.0706-.8941 1.0117-2.0941 1.8117-3.4352 1.9529-.7059.0706-1.4589.0941-2.2589.0471Z'/%3E%3Cpath fill='%23fff' d='M19.1313 22.4234c-.0471.1647-.1177.3529-.1883.5176-.5176.2824-1.0823.4706-1.6706.5177-.447.0471-.8941.0706-1.3647.0706-.2823 0-.5882 0-.8941-.0235-.5412-.0471-1.0824-.1648-1.6-.353-.2824-.4-.4706-.8706-.5412-1.3412-.1647-1.0353.1412-2.0941.7294-2.9647.0942-.1411.3059-.0941.353.0706.1647.5412.5176 1.0353.9176 1.4588.1177.1177.3059.0471.3294-.1176.0471-.5647.1647-1.6235.3765-2.1882.2588-.7059.6588-1.3883 1.2471-1.8824.1176-.0941.2823-.0471.3059.1177.1176.7058.4705 1.3647.8235 2 .4235.7058.8941 1.4117 1.1059 2.2117.2117.5883.2353 1.2706.0706 1.9059Z'/%3E%3Cpath fill='%23E33E3E' d='M19.1313 22.4234c-.0471.1647-.1177.3529-.1883.5176-.5176.2824-1.0823.4706-1.6706.5177-.447.0471-.8941.0706-1.3647.0706-.2823 0-.5882 0-.8941-.0235-.5412-.0471-1.0824-.1648-1.6-.353-.2824-.4-.4706-.8706-.5412-1.3412-.1647-1.0353.1412-2.0941.7294-2.9647.0942-.1411.3059-.0941.353.0706.1647.5412.5176 1.0353.9176 1.4588.1177.1177.3059.0471.3294-.1176.0471-.5647.1647-1.6235.3765-2.1882.2588-.7059.6588-1.3883 1.2471-1.8824.1176-.0941.2823-.0471.3059.1177.1176.7058.4705 1.3647.8235 2 .4235.7058.8941 1.4117 1.1059 2.2117.2117.5883.2353 1.2706.0706 1.9059Z'/%3E%3C/svg%3E")
-      background-position: 5px center
-      background-repeat: no-repeat
-      +screen('max', 600)
-        background-size: 20px
-    &_news
-      background-color: var(--blur)
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none'%3E%3Crect width='32' height='32' fill='%23006E90' rx='16'/%3E%3Cpath fill='%23fff' d='M21.1257 10.8357h-7.3304a1.94224 1.94224 0 0 0-.8895.0803 1.9437 1.9437 0 0 0-.7597.4696 1.94342 1.94342 0 0 0-.4696.7597 1.94471 1.94471 0 0 0-.0803.8895v7.3303c0 .3889-.1545.7618-.4294 1.0367a1.46612 1.46612 0 0 1-1.0367.4294h10.9956c.2987.0426.6032.0151.8895-.0803.2862-.0955.5463-.2562.7597-.4696.2134-.2134.3741-.4735.4696-.7597.0954-.2863.1229-.5908.0803-.8895v-6.5973a1.94471 1.94471 0 0 0-.0803-.8895 1.94342 1.94342 0 0 0-.4696-.7597 1.9437 1.9437 0 0 0-.7597-.4696 1.94224 1.94224 0 0 0-.8895-.0803Zm-3.6652 7.7533a.59878.59878 0 0 1-.0247.2736.5995.5995 0 0 1-.1445.2338.59775.59775 0 0 1-.2337.1444.59801.59801 0 0 1-.2737.0248h-2.312a.59746.59746 0 0 1-.2736-.0248.59811.59811 0 0 1-.2338-.1444.59811.59811 0 0 1-.1444-.2338.59746.59746 0 0 1-.0248-.2736V17.01a.59746.59746 0 0 1 .0248-.2736.59811.59811 0 0 1 .1444-.2338.59811.59811 0 0 1 .2338-.1444.59746.59746 0 0 1 .2736-.0248h2.312a.59801.59801 0 0 1 .2737.0248c.088.0293.1681.0788.2337.1444a.5995.5995 0 0 1 .1445.2338c.0293.088.0378.1817.0247.2736v1.579Zm3.6652.8598h-1.4661a.54966.54966 0 0 1-.3887-.161.54975.54975 0 0 1-.1611-.3887c0-.1459.058-.2857.1611-.3888a.54966.54966 0 0 1 .3887-.161h1.4661c.1458 0 .2856.0579.3887.161a.54981.54981 0 0 1 .1611.3888c0 .1458-.058.2856-.1611.3887a.54966.54966 0 0 1-.3887.161Zm0-2.1991h-1.4661a.54966.54966 0 0 1-.3887-.161.54981.54981 0 0 1-.1611-.3888c0-.1458.058-.2856.1611-.3887a.54966.54966 0 0 1 .3887-.161h1.4661c.1458 0 .2856.0579.3887.161a.54975.54975 0 0 1 .1611.3887c0 .1459-.058.2857-.1611.3888a.54966.54966 0 0 1-.3887.161Zm0-2.9321h-6.7806a.5499.5499 0 0 1-.3888-.161.55007.55007 0 0 1-.161-.3888c0-.1458.0579-.2856.161-.3888a.5499.5499 0 0 1 .3888-.161h6.7806c.1458 0 .2856.0579.3887.161.1031.1032.1611.243.1611.3888 0 .1458-.058.2856-.1611.3888a.54966.54966 0 0 1-.3887.161Zm-11.54461 6.414a.91388.91388 0 0 1-.35116-.0694.9152.9152 0 0 1-.49645-.4964.91589.91589 0 0 1-.06942-.3512v-4.5807a1.47047 1.47047 0 0 1 1.46604-1.4661h.3666v6.0468a.91705.91705 0 0 1-.0695.3507.91813.91813 0 0 1-.1984.2975.91644.91644 0 0 1-.29711.1988.91334.91334 0 0 1-.3506.07Z'/%3E%3C/svg%3E")
-      background-position: 5px center
-      background-repeat: no-repeat
-      +screen('max', 600)
-        background-size: 20px
-  &__timer
-    position: absolute
-    right: 1rem
-    top: 1rem
-    padding: .8rem 1.2rem
-    background: var(--red)
-    border-radius: 100px
-    font-weight: 500
-    +fs(12px)
-    color: var(--white)
-    +screen('max', 600)
-      +fs(10px)
+    .state
+      position: absolute
+      top: 1rem
+      left: 1rem
   &__foot
     margin-top: 2.5rem
     max-width: 370px
@@ -114,3 +80,181 @@
     text-wrap: balance
   .slick-slide
     margin-right: 2.5rem
+  .slider-arrows
+    +screen('max', 600)
+      display: none
+.news-list
+  padding-block: 5rem
+  +screen('max', 600)
+    padding-block: 3rem
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+    gap: 2rem
+    margin-bottom: 6rem
+    +screen('max', 600)
+      margin-bottom: 2rem
+  &__all
+    +fs(14px)
+    padding: 1.7rem 2rem
+    +screen('max', 600)
+      padding: 1.7rem 1.3rem
+      +fs(12px)
+    &:after
+      content: attr(data-count)
+      color: var(--white-70)
+      margin-left: .2rem
+  &__btn
+    padding: 1.1rem
+    +fs(14px)
+    +screen('max', 600)
+      padding: 1rem
+      +fs(12px)
+    &:after
+      content: attr(data-count)
+      color: var(--black-40)
+    svg
+      +screen('max', 600)
+        width: 17px
+  &__sort
+    display: flex
+    align-items: center
+    gap: .5rem
+  &__list
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 5rem 2.5rem
+    +screen('max', 1023)
+      grid-template-columns: repeat(2, 1fr)
+    +screen('max', 600)
+      grid-template-columns: 1fr
+      gap: 4rem
+  &__top
+    position: relative
+    .state
+      position: absolute
+      top: 1rem
+      left: 1rem
+  &__foot
+    margin-top: 2.5rem
+    max-width: 370px
+    +screen('max', 600)
+      margin-top: 2rem
+  &__date
+    font-weight: 400
+    +fs(12px)
+    line-height: 1.1
+    color: rgba(31, 32, 35, 0.5)
+    margin-bottom: 1rem
+  &__caption
+    +fs(22px)
+    margin-bottom: 1rem
+  &__pic
+    +screen('max', 1200)
+      width: 100%
+  &__txt
+    line-height: 1.1
+    color: var(--black-60)
+    text-wrap: balance
+  &__pagination
+    padding-block: 6rem
+    display: flex
+    justify-content: center
+    align-items: center
+    +screen('max', 600)
+      flex-wrap: wrap
+      padding-block: 3rem
+  &__pag
+    font-weight: 500
+    padding: 1.1rem 1.5rem
+    border-radius: 100%
+    transition: .5s ease
+    flex-shrink: 0
+    line-height: 1
+    +screen('max', 600)
+      +fs(14px)
+    &:hover
+      color: var(--lazur)
+    &.active
+      background: var(--lazur)
+      color: var(--white)
+    svg
+      margin-left: 1rem
+
+
+.news-details
+  padding-top: 5rem
+  overflow: hidden
+  +screen('max', 600)
+    padding-top: 3rem
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    margin-bottom: 4rem
+    +screen('max', 600)
+      flex-flow: column-reverse
+      margin-bottom: 2.5rem
+  &__date
+    font-weight: 400
+    +fs(16px)
+    line-height: 1.1
+    color: var(--black-60)
+    margin-bottom: 1rem
+  &__title
+    +fs(42px)
+    +screen('max', 600)
+      +fs(28px)
+  &__share
+    padding: 1.2rem 1.5rem
+  &__right
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    gap: 1.5rem
+    +screen('max', 600)
+      justify-content: space-between
+      flex-wrap: wrap
+      margin-bottom: 3rem
+  &__preview
+    position: relative
+    width: calc(100% + 10rem)
+    left: -5rem
+    object-fit: cover
+    border-radius: 40px
+    +screen('max', 1350)
+      width: calc(100% + 3rem)
+      left: -1.5rem
+    +screen('max', 600)
+      height: 500px
+      border-radius: 20px
+  &__text
+    margin-top: 4rem
+    font-size: 18px
+    color: #4d545a
+    +screen('max', 600)
+      font-size: 16px
+    p
+      margin-bottom: 1rem
+    h2,h3,h4
+      margin: 3rem 0
+      color: var(--black)
+      &:first-child
+        margin-top: 0
+    a
+      color: var(--cian)
+      text-decoration: underline
+  .state
+    +screen('max', 600)
+      padding: 1.2rem 1.5rem 1.2rem 4.5rem
+      +fs(14px)
+    &_news, &_sale
+      +screen('max', 600)
+        background-size: 30px
+  .timer
+    +screen('max', 600)
+      width: 100%
+      order: 1
+      flex-grow: 1

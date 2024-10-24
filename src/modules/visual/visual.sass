@@ -36,6 +36,8 @@
     &:before
       content: 'Ход строительства'
       font-size: 12px
+      +screen('min', 600)
+        content: none
   &__btn
     padding: 1.7rem 2rem
     +screen('max', 600)

@@ -66,6 +66,7 @@
     +screen('max', 1023)
       height: 500px
       object-fit: cover
+      border-radius: 20px
   &__content
     position: absolute
     bottom: 3rem
@@ -79,3 +80,10 @@
     right: 6rem
     +screen('max', 600)
       display: none
+  .slick-dots
+    right: 2rem
+    left: auto
+    bottom: 4rem
+    z-index: 2
+    li
+      background: var(--white)
