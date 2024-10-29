@@ -10,6 +10,9 @@
       gap: 1.5rem
   &__item
     position: relative
+    &:hover
+      .build__pic, .build__sign
+        transform: translateY(10px)
   &__sign
     backdrop-filter: blur(12px)
     padding: 1.2rem 1.5rem 1.2rem 4.5rem
@@ -20,6 +23,8 @@
     position: absolute
     top: 1rem
     left: 1rem
+    z-index: 1
+    transition: .5s ease
     +screen('max', 600)
       padding: .7rem 1rem .7rem 3.5rem
       +fs(10px)
@@ -43,6 +48,7 @@
     border-radius: 30px
     object-fit: cover
     border-radius: 15px
+    transition: .5s ease
     +screen('max', 600)
       width: calc(50vw - .75rem)
       height: 126px

@@ -38,6 +38,9 @@
     background: var(--gray-xs)
     position: relative
     margin-bottom: 3rem
+    transition: .5s ease
+    &:hover
+      background: var(--yellow-hover)
   &__phone
     font-weight: 600
     +fs(22px)
@@ -53,6 +56,13 @@
     top: 50%
     transform: translateY(-50%)
     right: 2rem
+    path, rect
+      transition: .5s ease
+    &:hover
+      path
+        fill: var(--white)
+      rect
+        fill: var(--lazur-hover)
   &__item
     margin-bottom: 2rem
   &__caption
@@ -70,6 +80,9 @@
     +fs(18px)
     font-weight: 500
     color: var(--lazur)
+    transition: .5s ease
+    &:hover
+      color: var(--lazur-hover)
   &__btn
     margin-top: .8rem
     padding: 2rem 3.75rem
@@ -86,3 +99,7 @@
       flex-flow: row
       bottom: 9rem
       right: 0
+    circle
+      transition: .5s ease
+      &:hover
+        fill: var(--lazur-hover)

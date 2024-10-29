@@ -23,6 +23,7 @@
     margin-bottom: .5rem
     font-weight: 500
     box-sizing: border-box
+    transition: .5s ease
     +screen('max', 600)
       +fs(12px)
       padding: 0.8rem 1rem
@@ -37,6 +38,11 @@
         fill: var(--brown)
       rect
         fill: var(--yellow)
+        transition: .5s ease
+      &:hover
+        background: var(--lazur-hover)
+        rect
+          fill: var(--yellow-hover)
     &_white
       background: var(--white)
       color: var(--black)
@@ -44,6 +50,12 @@
         fill: var(--white)
       rect
         fill: var(--lazur)
+        transition: .5s ease
+      &:hover
+        background: var(--lazur-hover)
+        color: var(--white)
+        rect
+          fill: var(--yellow-hover)
   &__slide
     position: relative
     color: var(--white)

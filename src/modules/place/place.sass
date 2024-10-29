@@ -68,6 +68,7 @@
     position: absolute
     left: 2rem
     top: 69%
+    transition: .5s ease
     +screen('max', 1200)
       top: 64%
     +screen('max', 1023)
@@ -80,6 +81,12 @@
     svg
       +screen('max', 600)
         transform: scale(.7)
+    path
+      transition: .5s ease
+    &:hover
+      background: var(--lazur-hover)
+      path
+        fill: var(--white)
 
 .place-modal
   max-width: 792px

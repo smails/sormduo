@@ -14,50 +14,63 @@
       margin-left: 1rem
   &__slide
     position: relative
-  &__wrap
-    display: flex
-    gap: 4.4rem
-    width: clamp(500px, 60vw, 713px)
-    padding: 1rem
-    box-sizing: border-box
-    background: var(--gray-xs)
-    border-radius: 30px
-    +screen('max', 1023)
-      gap: 2rem
+  &__content
+    position: absolute
+    width: min(254px, 70%)
+    bottom: -1px
+    left: -1px
+    background: var(--white)
+    padding: 2rem 2rem 0 0
+    border-radius: 0 30px
+    transition: .5s ease
     +screen('max', 600)
+      position: relative
       background: none
+      border-radius: 0
       padding: 0
-      display: block
-      width: 100%
-  &__conetnt
-    display: flex
-    flex-flow: column
-    justify-content: space-between
-    padding-block: 2rem
-    +screen('max', 600)
-      display: block
-      max-width: 275px
+      left: 0
+      bottom: 0
+      padding-block: 2rem
+    &:after,
+    &:before
+      position: absolute
+      content: ''
+      width: 30px
+      height: 30px
+      background-color: transparent
+      +screen('max', 600)
+        content: none
+    &:before
+      border-radius: 0 0 0 60px
+      border-bottom: 15px solid var(--white)
+      border-left: 15px solid var(--white)
+      top: -30px
+      left: -15px
+    &:after
+      border-radius: 0 0 0 60px
+      border-bottom: 15px solid var(--white)
+      border-left: 15px solid var(--white)
+      right: -30px
+      bottom: -15px
   &__txt
     line-height: 1.1
     opacity: 0.6
     color: #1f2023
     +screen('max', 600)
       margin-top: 1rem
-  &__filling
-    position: absolute
-    bottom: 0
-    left: 0
-    width: min(254px, 70%)
-  &__holder
+  &__caption
     +fs(22px)
     font-weight: 600
     line-height: 1.05
     font-family: var(--second-family)
-    margin-bottom: 1rem
+    transition: .5s ease
   &__pic
     pointer-events: none
-    border-radius: 20px
+    border-radius: 30px
     object-fit: cover
+    width: 397px
+    height: 397px
+    transition: .5s ease
     +screen('max', 600)
       width: 280px
       height: 280px
@@ -68,3 +81,43 @@
   .slider-arrows
     +screen('max', 600)
       display: none
+  .slick-current
+    .features__pic
+      width: 297px
+      height: 387px
+      +screen('max', 600)
+        width: 280px
+        height: 280px
+    .features__wrap
+      display: flex
+      gap: 4.4rem
+      width: clamp(500px, 60vw, 713px)
+      padding: 1rem
+      box-sizing: border-box
+      background: var(--gray-xs)
+      border-radius: 30px
+      +screen('max', 1023)
+        gap: 2rem
+      +screen('max', 600)
+        background: none
+        padding: 0
+        display: block
+        width: 100%
+    .features__content
+      display: flex
+      flex-flow: column
+      justify-content: space-between
+      padding-block: 2rem
+      position: relative
+      background: transparent
+      border-radius: 0
+      +screen('max', 600)
+        display: block
+        max-width: 75vw
+      &:before, &:after
+        content: none
+    .features__caption
+      +fs(28px)
+      margin-bottom: 1rem
+      +screen('max', 600)
+        +fs(22px)

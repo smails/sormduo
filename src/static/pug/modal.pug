@@ -108,3 +108,112 @@
         +e.slide
           +e.IMG.pic(src='/img/plane-1-full.png ' alt='')
   +b.slider-arrows
+
++b.modal-work
+  +e.inner.inner
+    +e.overlay
+    +e.container
+      +e.head
+        +e.IMG.icon(src='/icon/logo.svg' alt='')
+        +e.close
+          svg(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none')
+            path(fill='#006E90' fill-rule='evenodd' d='M15.3626 1.56187c.1952-.19526.1952-.51184 0-.7071-.1953-.19527-.5119-.19527-.7071 0l-6.65144 6.6514L1.3525.85461C1.15724.65935.84065.65935.6454.8546c-.19527.19526-.19527.51184 0 .70711l6.65155 6.65156L.64539 14.8648c-.19526.1953-.19526.5119 0 .7071.19526.1953.51185.1953.70711 0l6.65156-6.65151 6.65144 6.65141c.1952.1953.5118.1953.7071 0 .1952-.1953.1952-.5118 0-.7071L8.71117 8.21328l6.65143-6.65141Z' clip-rule='evenodd')
+      +e.body
+        +e.content
+          +e.title.display-3 Ход строительства
+          +e.P.sign Фотоотчет за период
+          +e.row
+            +e.DETAILS.select
+              +e.SUMMARY.txt 2024
+              +e.list
+                li 2023
+                li 2022
+                li 2021
+            +e.DETAILS.select
+              +e.SUMMARY.txt Сентябрь
+              +e.list
+                li Октябрь
+                li Ноябрь
+                li Декабрь
+          +e.slider
+            +e.slide
+              +e.IMG.pic(src='/img/work-slider-1.png' alt='')
+            +e.slide
+              +e.IMG.pic(src='/img/work-slider-1.png' alt='')
+            +e.slide
+              +e.A.video(href="")
+                +e.IMG.pic(src='/img/work-slider-1.png' alt='')
+          +e.text В сентябре 2024 года завершена кладка стен и установка окон в 80% квартир. Начались внутренние отделочные работы и монтаж лифтов в первых секциях. Также ведутся работы по прокладке инженерных коммуникаций и благоустройству территории: устанавливаются тротуары и проводится озеленение.
+      +e.control
+        +b.slider-dots
+        +b.slider-arrows
+
+
++b.modal(data-modal="#form")
+  +e.gradient_orange
+  +e.overlay
+  +e.close.js-close-modal
+    svg(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none')
+      path(fill='#006E90' fill-rule='evenodd' d='M15.3626 1.56187c.1952-.19526.1952-.51184 0-.7071-.1953-.19527-.5119-.19527-.7071 0l-6.65144 6.6514L1.3525.85461C1.15724.65935.84065.65935.6454.8546c-.19527.19526-.19527.51184 0 .70711l6.65155 6.65156L.64539 14.8648c-.19526.1953-.19526.5119 0 .7071.19526.1953.51185.1953.70711 0l6.65156-6.65151 6.65144 6.65141c.1952.1953.5118.1953.7071 0 .1952-.1953.1952-.5118 0-.7071L8.71117 8.21328l6.65143-6.65141Z' clip-rule='evenodd')
+  +e.container_action
+    +b.modal-form
+      +e.FORM.action
+        +e.P.title.display-3 Отправить заявку
+        +e.P.subtitle Введите свои данные и мы вас бесплатно проконсультируем
+        +e.row
+          +e.INPUT.field(placeholder="Имя")
+          +e.INPUT.field(placeholder="Email")
+        +e.BUTTON.submit.btn_orange Отправить
+        +e.label Отправляя свои данные Вы соглашаетесь с 
+          a(href="#") политикой обработки персональных данных
+
++b.modal(data-modal="#success" )
+  +e.gradient_blue
+  +e.overlay
+  +e.close.js-close-modal
+    svg(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none')
+      path(fill='#006E90' fill-rule='evenodd' d='M15.3626 1.56187c.1952-.19526.1952-.51184 0-.7071-.1953-.19527-.5119-.19527-.7071 0l-6.65144 6.6514L1.3525.85461C1.15724.65935.84065.65935.6454.8546c-.19527.19526-.19527.51184 0 .70711l6.65155 6.65156L.64539 14.8648c-.19526.1953-.19526.5119 0 .7071.19526.1953.51185.1953.70711 0l6.65156-6.65151 6.65144 6.65141c.1952.1953.5118.1953.7071 0 .1952-.1953.1952-.5118 0-.7071L8.71117 8.21328l6.65143-6.65141Z' clip-rule='evenodd')
+  +e.container_action
+    +b.modal-form
+      +e.IMG.pic(src='/icon/success.svg' alt='')
+      +e.P.title.display-3 Ваша заявка получена!
+      +e.P.subtitle Мы перезвоним вам в ближайшее время
+      +e.BUTTON.btn.btn_orange.js-close-modal Хорошо!
+
++b.modal(data-modal="#error" )
+  +e.gradient_red
+  +e.overlay
+  +e.close.js-close-modal
+    svg(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none')
+      path(fill='#006E90' fill-rule='evenodd' d='M15.3626 1.56187c.1952-.19526.1952-.51184 0-.7071-.1953-.19527-.5119-.19527-.7071 0l-6.65144 6.6514L1.3525.85461C1.15724.65935.84065.65935.6454.8546c-.19527.19526-.19527.51184 0 .70711l6.65155 6.65156L.64539 14.8648c-.19526.1953-.19526.5119 0 .7071.19526.1953.51185.1953.70711 0l6.65156-6.65151 6.65144 6.65141c.1952.1953.5118.1953.7071 0 .1952-.1953.1952-.5118 0-.7071L8.71117 8.21328l6.65143-6.65141Z' clip-rule='evenodd')
+  +e.container_action
+    +b.modal-form
+      +e.IMG.pic(src='/icon/error.svg' alt='')
+      +e.P.title.display-3 Что-то не так
+      +e.P.subtitle Произошла ошибка, попробуйте отправить заявку еще раз
+      +e.BUTTON.btn.btn_orange.js-close-modal Хорошо!
+
++b.modal(data-modal="#success-sub" )
+  +e.gradient_blue
+  +e.overlay
+  +e.close.js-close-modal
+    svg(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none')
+      path(fill='#006E90' fill-rule='evenodd' d='M15.3626 1.56187c.1952-.19526.1952-.51184 0-.7071-.1953-.19527-.5119-.19527-.7071 0l-6.65144 6.6514L1.3525.85461C1.15724.65935.84065.65935.6454.8546c-.19527.19526-.19527.51184 0 .70711l6.65155 6.65156L.64539 14.8648c-.19526.1953-.19526.5119 0 .7071.19526.1953.51185.1953.70711 0l6.65156-6.65151 6.65144 6.65141c.1952.1953.5118.1953.7071 0 .1952-.1953.1952-.5118 0-.7071L8.71117 8.21328l6.65143-6.65141Z' clip-rule='evenodd')
+  +e.container_action
+    +b.modal-form
+      +e.IMG.pic(src='/icon/success.svg' alt='')
+      +e.P.title.display-3 Ваша подписка оформлена!
+      +e.BUTTON.btn.btn_orange.js-close-modal Хорошо!
+
++b.modal(data-modal="#error-sub" )
+  +e.gradient_red
+  +e.overlay
+  +e.close.js-close-modal
+    svg(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none')
+      path(fill='#006E90' fill-rule='evenodd' d='M15.3626 1.56187c.1952-.19526.1952-.51184 0-.7071-.1953-.19527-.5119-.19527-.7071 0l-6.65144 6.6514L1.3525.85461C1.15724.65935.84065.65935.6454.8546c-.19527.19526-.19527.51184 0 .70711l6.65155 6.65156L.64539 14.8648c-.19526.1953-.19526.5119 0 .7071.19526.1953.51185.1953.70711 0l6.65156-6.65151 6.65144 6.65141c.1952.1953.5118.1953.7071 0 .1952-.1953.1952-.5118 0-.7071L8.71117 8.21328l6.65143-6.65141Z' clip-rule='evenodd')
+  +e.container_action
+    +b.modal-form
+      +e.IMG.pic(src='/icon/error.svg' alt='')
+      +e.P.title.display-3 Не удалось подписаться
+      +e.P.subtitle Произошла ошибка, попробуйте оформить подписку еще раз
+      +e.BUTTON.btn.btn_orange.js-close-modal Хорошо!

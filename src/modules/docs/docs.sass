@@ -20,6 +20,7 @@
     border-radius: 30px
     box-sizing: border-box
     position: relative
+    transiton: .5s ease
     +screen('max', 1200)
       padding: 3rem 1.5rem
     +screen('max', 1023)
@@ -28,10 +29,17 @@
       width: 100%
       padding: 2rem 1.5rem
       border-radius: 15px
+    &:hover
+      background: var(--lazur-hover)
+      .docs__sign, .docs__txt, .docs__download
+          color: var(--white)
+      path
+        stroke: var(--white)
   &__sign
     margin-bottom: 1.5rem
     line-height: 1.1
     color: var(--black-60)
+    transiton: .5s ease
     +screen('max', 600)
       +fs(14px)
       margin-bottom: 0.8rem
@@ -41,11 +49,13 @@
     line-height: 1.05
     font-family: var(--second-family)
     margin-bottom: 5.7rem
+    transiton: .5s ease
     +screen('max', 600)
       margin-bottom: 0
       padding-right: 5rem
   &__download
     color: var(--black-40)
+    transiton: .5s ease
     +screen('max', 600)
       width: 40px
       height: 40px
@@ -66,6 +76,7 @@
       path
         +screen('max', 600)
           stroke: var(--lazur)
+          transiton: .5s ease
           stroke-opacity: 1
     span
       vertical-align: middle

@@ -35,9 +35,30 @@
     font-weight: 500
     +fs(18px)
     line-height: 1.1
-    padding: 1rem 1rem 1rem 0
+    padding: 1rem 3rem 1rem 0
     background: var(--white)
     border-radius: 30px
+    border-radius: 0 30px
+    transition: .5s ease
+    &:after,
+    &:before
+      position: absolute
+      content: ''
+      width: 30px
+      height: 30px
+      background-color: transparent
+    &:before
+      border-radius: 0 0 0 70px
+      border-bottom: 15px solid var(--white)
+      border-left: 15px solid var(--white)
+      top: -30px
+      left: -15px
+    &:after
+      border-radius: 0 0 0 70px
+      border-bottom: 15px solid var(--white)
+      border-left: 15px solid var(--white)
+      right: -22px
+      bottom: -15px
   .slick-slide
     margin-right: 2.5rem
 

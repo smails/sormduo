@@ -54,6 +54,9 @@
     +fs(16px)
     font-weight: 500
     color: var(--lazur)
+    transition: .5s ease
+    &:hover
+      color: var(--lazur-hover)
   &__social
     margin-top: 5rem
     display: flex
@@ -63,6 +66,10 @@
       top: 20rem
       right: 1.5rem
       flex-flow: column
+    circle
+      transition: .5s ease
+      &:hover
+        fill: var(--lazur-hover)
   &__left
     max-width: 271px
   &__right
@@ -89,6 +96,9 @@
     line-height: 1.1
     margin-bottom: 1rem
     color: var(--black-60)
+    transition: .5s ease
+    &:hover
+      color: var(--lazur-hover)
     &_bold
       margin-bottom: 2rem
       +fs(18px)
@@ -102,9 +112,14 @@
     right: 0
     +screen('max', 1200)
       right: 2rem
+    rect
+      transition: .5s ease
+      &:hover
+        fill: var(--lazur-hover)
   &__phone
     display: block
     margin-bottom: 3rem
+    transition: .5s ease
     +screen('max', 600)
       position: absolute
       top: 12.5rem
@@ -112,6 +127,8 @@
       right: 0
       margin: 0 auto
       text-align: center
+    &:hover
+      color: var(--lazur-hover)
   &__btn
     +screen('max', 600)
       position: absolute
@@ -127,8 +144,11 @@
     +fs(14px)
     color: rgba(31, 32, 35, 0.5)
     margin-bottom: 1rem
+    transition: .5s ease
     +screen('max', 600)
       +fs(16px)
+    &:hover
+      color: var(--lazur-hover)
   &__work
     color: rgba(31, 32, 35, 0.5)
     margin-bottom: 4rem
@@ -137,6 +157,9 @@
     a
       color: var(--black)
       font-weight: 700
+      transition: .5s ease
+      &:hover
+        color: var(--lazur-hover)
   &__copy
     +fs(14px)
     line-height: 1.1

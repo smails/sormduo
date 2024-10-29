@@ -34,6 +34,11 @@
     &_plane
       .slick-dots
         bottom: -32vh!important
+    &_action
+      border-radius: 40px
+      background: var(--gray-xs)
+      +screen('max', 600)
+        border-radius: 20px
   &__close
     position: absolute
     top: 4rem
@@ -51,6 +56,25 @@
       height: 45px
       top: 2.5rem
       right: 1.5rem
+  &__gradient
+    position: absolute
+    top: -1050px
+    width: 1194px
+    height: 1194px
+    filter: blur(100px)
+    opacity: 0.5
+    left: 50%
+    transform: translateX(-50%)
+    +screen('max', 600)
+      width: 600px
+      height: 600px
+      top: -600px
+    &_orange
+      background: var(--yellow)
+    &_blue
+      background: var(--cian)
+    &_red
+      background: var(--red)
   .slider-arrows
     position: absolute
     bottom: 4rem
@@ -63,3 +87,214 @@
     z-index: 2
     li
       background: var(--white)
+
+.modal-work
+  position: fixed
+  z-index: 99
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  display: none
+  &__overlay
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+    width: 100%
+    height: 100%
+    background: #000
+    opacity: 0.8
+  &__container
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    border-radius: 30px
+    background: var(--white)
+    max-width: 1326px
+    width: 100%
+    padding: 3rem 5.2rem
+    box-sizing: border-box
+    +screen('max', 600)
+      width: calc(100% - 3rem)
+      top: 13rem
+      transform: translate(-50%, 0)
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 4.5rem
+  &__close
+    background: var(--gray-xs)
+    width: 56px
+    height: 56px
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 12px
+    cursor: pointer
+    +screen('max', 600)
+      width: 45px
+      height: 45px
+  &__body
+    position: relative
+    min-height: 490px
+  &__content
+    max-width: 331px
+    width: 40%
+  &__sign
+    +fs(14px)
+    font-weight: 500
+    color: var(--black-60)
+    margin-top: 1rem
+  &__row
+    margin-top: 3rem
+    display: flex
+    gap: 1rem
+  &__select
+    position: relative
+    flex-grow: 1
+    &[open]
+      .modal-work__txt:before
+        transform: translateY(-50%) rotate(180deg)
+  &__txt
+    padding: 2rem
+    box-sizing: border-box
+    border-radius: 12px
+    background: var(--gray-xs)
+    font-weight: 500
+    +fs(16px)
+    line-height: 110%
+    position: relative
+    cursor: pointer
+    &:before
+      content: ''
+      width: 12px
+      height: 10px
+      background-image: url("data:image/svg+xml,%3Csvg width='11' height='8' viewBox='0 0 11 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.1038 6.98532C5.30395 7.24532 5.69605 7.24532 5.8962 6.98532L10.0765 1.555C10.3296 1.22621 10.0952 0.75 9.68026 0.75H1.31974C0.904818 0.75 0.670436 1.22621 0.923535 1.555L5.1038 6.98532Z' fill='%23006E90'/%3E%3C/svg%3E%0A")
+      background-position: center
+      background-size: contain
+      position: absolute
+      right: 1.5rem
+      top: 50%
+      transform: translateY(-50%)
+      transition: .5s ease
+  &__list
+    position: absolute
+    top: 100%
+    left: 0
+    width: 100%
+    margin-top: 7px
+    border-radius: 15px
+    box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.09)
+    background: var(--white)
+    padding: .8rem 1.5rem
+    z-index: 1
+    list-style: none
+    box-sizing: border-box
+    li
+      line-height: 1
+      transition: .5s ease
+      padding-block: 1.2rem
+      margin-bottom: 0
+  &__slider
+    position: absolute
+    right: 0
+    top: 0
+    width: 70%
+    max-width: 810px
+  &__text
+    position: absolute
+    bottom: 0
+    left: 0
+    line-height: 110%
+    color: rgba(35, 31, 32, 0.7)
+    width: 100%
+    max-width: 331px
+  &__control
+    margin-top: 2rem
+    display: flex
+    justify-content: flex-end
+    gap: 3rem
+    align-items: center
+  .slider-dots
+    .slick-dots
+      position: relative
+      height: 23px
+      li
+        background: none
+        width: auto
+        height: auto
+        +fs(18px)
+        font-weight: 600
+        position: absolute
+        opacity: 0
+        &.slick-active
+          transform: scale(1)
+          opacity: 1
+
+.modal-form
+  width: 764px
+  padding: 6rem 7rem
+  box-sizing: border-box
+  text-align: center
+  +screen('max', 810)
+    width: calc(100vw - 6rem)
+  +screen('max', 600)
+    padding: 3rem 2rem
+    width: calc(100vw - 3rem)
+  &__title
+    margin-bottom: 1.5rem
+  &__subtitle
+    +fs(18px)
+    line-height: 115%
+    color: var(--black-60)
+    +screen('max', 600)
+      +fs(16px)
+  &__row
+    display: flex
+    gap: 2.4rem
+    width: 100%
+    margin-top: 4rem
+    +screen('max', 600)
+      gap: 1.5rem
+      margin-top: 2.5rem
+      flex-flow: column
+  &__field
+    +fs(16px)
+    background: var(--white)
+    border: none
+    padding: 1.8rem 1.5rem
+    box-sizing: border-box
+    border-radius: 12px
+    flex-grow: 1
+    +screen('max', 600)
+      +fs(14px)
+      width: 100%
+    &:placeholder
+      color: rgba(31, 32, 35, 0.5)
+  &__label
+    margin-top: 2.5rem
+    +fs(12px)
+    color: var(--black-60)
+    +screen('max', 600)
+      margin-top: 2rem
+    a
+      color: var(--lazur)
+  &__submit
+    width: 100%
+    margin-top: 2.4rem
+    padding: 2rem
+  &__pic
+    margin-bottom: 3rem
+    vertical-align: middle
+    +screen('max', 600)
+      width: 90px
+      margin-bottom: 2rem
+  &__btn
+    margin-top: 4rem
+    padding: 2rem 4.6rem
+    +screen('max', 600)
+      width: 100%
+      margin-top: 2.5rem

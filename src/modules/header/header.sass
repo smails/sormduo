@@ -52,10 +52,13 @@
   &__list
     display: flex
     gap: 2rem
+    position: relative
+    top: .5rem
     +screen('max', 1200)
       display: none
   &__item
     margin-bottom: 0
+    padding-bottom: 1rem
     &:has(.header__dropdown)
       position: relative
       padding-right: 1.2rem
@@ -69,9 +72,34 @@
         position: absolute
         right: 0
         top: 7px
+    &:hover
+      .header__dropdown
+        display: block
   &__link
     font-weight: 500
     +fs(14px)
+    transition: .5s ease
+    display: inline-block
+    border-bottom: 1px solid transparent
+    &:hover
+      color: var(--lazur-hover)
+      border-color: var(--lazur-hover)
+  &__dropdown
+    position: absolute
+    top: 100%
+    left: -2rem
+    border-radius: 15px
+    padding: 1.5rem 1.8rem
+    box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.25), 0 0 14px 0 rgba(0, 0, 0, 0.07)
+    background: var(--white)
+    display: none
+    li
+      &:last-of-type
+        margin-bottom: 0
+    a
+      transition: .5s ease
+      &:hover
+        color: var(--lazur-hover)
   &__info
     display: flex
     align-items: center
@@ -90,11 +118,17 @@
     text-align: right
     margin-bottom: 0.6rem
     display: block
+    transition: .5s ease
+    &:hover
+      color: var(--lazur-hover)
     +screen('max', 600)
       display: none
   &__sign
     +fs(12px)
     text-align: right
+    transition: .5s ease
+    &:hover
+      color: var(--lazur-hover)
     +screen('max', 600)
       display: none
   &__open-modal
@@ -103,6 +137,10 @@
     top: 0
     +screen('max', 600)
       position: relative
+    rect
+      transition: .5s ease
+      &:hover
+        fill: var(--yellow-hover)
   &__btn
     +screen('max', 1023)
       display: none
@@ -178,7 +216,7 @@
       +fs(16px)
     &_bold
       margin-bottom: 2rem
-      +fs(26px)
+      +fs(28px)
       font-weight: 600
       color: var(--white)
       +screen('max', 600)
