@@ -116,15 +116,60 @@
     width: 100%
     padding: 3rem 5.2rem
     box-sizing: border-box
+    +screen('max', 900)
+      padding: 3rem
     +screen('max', 600)
       width: calc(100% - 3rem)
-      top: 13rem
+      top: 1rem
       transform: translate(-50%, 0)
+      padding: 1.5rem
+      border-radius: 20px
+      max-height: 100%
+      overflow: auto
+  &__cntrl
+    display: flex
+    justify-content: flex-end
+    gap: 3rem
+    +screen('max', 600)
+      display: block
+  &__icon
+    +screen('max', 600)
+      width: 130px
+  &__box
+    display: none
+  &__nav
+    +screen('max', 600)
+      position: absolute
+      top: 13rem
+      width: 100%
+      left: 0
+      z-index: 2
   &__head
     display: flex
     justify-content: space-between
     align-items: center
     margin-bottom: 4.5rem
+    +screen('max', 600)
+      margin-bottom: 2.5rem
+  &__btn
+    padding: 2.1rem 2.5rem
+    margin-left: 0.5rem
+    +screen('max', 600)
+      padding: 0.5rem 0
+      background: none
+      border-radius: none
+      +fs(14px)
+      font-weight: 500
+      border-bottom: 1px solid transparent
+      border-radius: 0
+      margin-left: 2rem
+    &.active
+      color: var(--lazur)
+      background: initial
+      border-bottom-color: var(--lazur)
+  &__title
+    +screen('max', 600)
+      padding-bottom: 4rem
   &__close
     background: var(--gray-xs)
     width: 56px
@@ -140,14 +185,22 @@
   &__body
     position: relative
     min-height: 490px
+    padding-bottom: 7rem
+    +screen('max', 1200)
+      min-height: 350px
+      padding-bottom: 2rem
   &__content
     max-width: 331px
     width: 40%
+    +screen('max', 600)
+      width: 100%
   &__sign
     +fs(14px)
     font-weight: 500
     color: var(--black-60)
     margin-top: 1rem
+    +screen('max', 600)
+      display: none
   &__row
     margin-top: 3rem
     display: flex
@@ -168,6 +221,9 @@
     line-height: 110%
     position: relative
     cursor: pointer
+    +screen('max', 600)
+      +fs(14px)
+      padding: 2rem 1.5rem
     &:before
       content: ''
       width: 12px
@@ -204,20 +260,47 @@
     top: 0
     width: 70%
     max-width: 810px
+    +screen('max', 1200)
+      width: 55%
+    +screen('max', 600)
+      width: 100%
+      position: relative
+      margin-top: 2rem
   &__text
     position: absolute
-    bottom: 0
+    bottom: 5.6rem
     left: 0
     line-height: 110%
     color: rgba(35, 31, 32, 0.7)
     width: 100%
     max-width: 331px
+    +screen('max', 600)
+      position: relative
+      bottom: 0
+      +fs(14px)
+      margin-top: 5rem
   &__control
-    margin-top: 2rem
     display: flex
     justify-content: flex-end
     gap: 3rem
     align-items: center
+    position: absolute
+    bottom: 0
+    right: 0
+    width: 100%
+    +screen('max', 600)
+      justify-content: flex-start
+      bottom: auto
+      top: 69%
+      left: 1.5rem
+  &__pic
+    max-width: 100%
+    border-radius: 40px
+    +screen('max', 600)
+      border-radius: 20px
+  .slider-arrows
+    +screen('max', 600)
+      display: none
   .slider-dots
     .slick-dots
       position: relative
@@ -230,6 +313,8 @@
         font-weight: 600
         position: absolute
         opacity: 0
+        +screen('max', 600)
+          +fs(16px)
         &.slick-active
           transform: scale(1)
           opacity: 1
@@ -298,3 +383,132 @@
     +screen('max', 600)
       width: 100%
       margin-top: 2.5rem
+
+.modal-pay
+  position: fixed
+  z-index: 99
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  display: none
+  &__overlay
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+    width: 100%
+    height: 100%
+    background: #000
+    opacity: 0.8
+  &__close
+    background: var(--gray-xs)
+    width: 56px
+    height: 56px
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 12px
+    cursor: pointer
+    position: absolute
+    right: 6.5rem
+    top: 2rem
+    z-index: 2
+    +screen('max', 600)
+      width: 45px
+      height: 45px
+      right: 2.5rem
+  &__container
+    position: absolute
+    height: 100%
+    bottom: 0
+    right: 0
+    background-color: var(--white)
+    background-image: url(../icon/bg-pay.svg)
+    background-repeat: no-repeat
+    background-position: right bottom
+    border-radius: 40px 0 0 40px
+    max-width: 670px
+    width: 100%
+    overflow: auto
+    box-shadow: -17px 4px 40px 0 rgba(0, 0, 0, 0.03)
+    padding: 10rem 5rem
+    box-sizing: border-box
+    +screen('max', 600)
+      border-radius: 20px 20px 0 0
+      padding: 3rem 1.5rem
+      height: auto
+      background-image: none
+      padding-bottom: 10rem
+  &__title
+    margin-bottom: 2.5rem
+    +screen('max', 600)
+      margin-bottom: 2rem
+  &__txt
+    line-height: 115%
+    color: var(--black-60)
+    +fs(18px)
+    margin-bottom: 4rem
+    +screen('max', 600)
+      +fs(16px)
+      margin-bottom: 2rem
+  &__caption
+    +fs(22px)
+    line-height: 105%
+    font-weight: 500
+    font-family: var(--second-family)
+    margin-bottom: 2.5rem
+    +screen('max', 600)
+      +fs(20px)
+      margin-bottom: 2rem
+  &__info
+    h5
+      +fs(18px)
+      font-weight: 500
+      line-height: 1.1
+      margin-bottom: 1rem
+      +screen('max', 600)
+        +fs(16px)
+    p
+      +fs(14px)
+      color: var(--black-60)
+    sup
+      color: var(--red)
+      vertical-align: text-top
+  &__control
+    display: flex
+    gap: 3rem
+    position: absolute
+    left: 5rem
+    bottom: 4rem
+    +screen('max', 600)
+      bottom: 2rem
+      left: 1.5rem
+      flex-flow: row-reverse
+  &__nav
+    border-radius: 100px
+    width: 102px
+    height: 56px
+    background: var(--gray-xs)
+    display: flex
+    align-items: center
+    justify-content: center
+  &__btn
+    width: 46px
+    height: 46px
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: .5s ease
+    border-radius: 100%
+    cursor: pointer
+    svg
+      vertical-align: middle
+    &:hover
+      background: var(--lazur)
+      path
+        fill: var(--white)
+  &__call
+    line-height: 1.34
+    +screen('max', 600)
+      line-height: 1.5
