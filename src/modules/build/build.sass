@@ -6,7 +6,7 @@
   &__list
     display: flex
     gap: 3rem
-    +screen('max', 600)
+    +screen('max', 1200)
       gap: 1.5rem
   &__item
     position: relative
@@ -49,6 +49,8 @@
     object-fit: cover
     border-radius: 15px
     transition: .5s ease
+    +screen('max', 1200)
+      height: 322px
     +screen('max', 600)
       width: calc(50vw - .75rem)
       height: 126px

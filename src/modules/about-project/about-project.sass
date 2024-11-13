@@ -3,29 +3,43 @@
   background-image: url(../icon/about-bg.svg)
   background-repeat: no-repeat
   background-position: right 163%
-  +screen('max', 1023)
-    background-position: right 150%
-  +screen('max', 600)
-    background-position: 90% 25%
-    background-size: 150px
+  +screen('max', 1200)
+    background: none
   &__head
     display: flex
     justify-content: space-between
     align-items: flex-start
     gap: 5rem
-    +screen('max', 600)
+    +screen('max', 1023)
       flex-flow: column
       gap: 3rem
   &__title
-    text-align: right
-    max-width: 878px
     position: relative
+    max-width: 1470px
+    width: 100%
+    +screen('max', 1440)
+      max-width: 878px
+      text-align: right
+    +screen('max', 1200)
+      text-align: left
+      max-width: 700px
+      text-indent: 20%
     +screen('max', 600)
       text-align: left
       padding-top: 3rem
+      text-indent: 0
+    span
+      display: block
+      text-align: right
+      +screen('max', 1440)
+        display: inline
     svg
       padding-inline: 2.5rem
-      +screen('max', 600)
+      +screen('min', 1441)
+        position: absolute
+        right: 15%
+        bottom: 0
+      +screen('max', 1200)
         display: none
     &:before
       content: attr(data-sign)
@@ -36,17 +50,21 @@
       font-weight: 500
       letter-spacing: normal
       font-family: var(--font-family)
+      text-indent: 0
+      +screen('max', 1200)
+        top: 0
   &__info
     text-align: right
     line-height: 1.1
     margin-top: 1rem
     flex-shrink: 0
-    +screen('max', 600)
+    +screen('max', 1023)
       width: 100%
       display: flex
       flex-wrap: wrap
       gap: 2rem
       margin-bottom: 3rem
+      text-align: left
   &__item
     margin-bottom: 3.5rem
     +screen('max', 600)
@@ -55,6 +73,9 @@
       color: var(--black-60)
       +screen('max', 600)
         +fs(12px)
+      br
+        +screen('max', 1023)
+          display: none
     p
       margin-top: 1rem
       +fs(28px)
@@ -67,10 +88,14 @@
     display: flex
     align-items: center
     gap: 6rem
-    +screen('max', 1023)
-      flex-flow: column
+    position: relative
+    top: -120px
+    +screen('max', 1440)
+      top: 0
       gap: 3rem
       align-items: flex-start
+    +screen('max', 600)
+      flex-flow: column
   &__video
     position: relative
     +screen('max', 600)
@@ -81,7 +106,9 @@
     left: 50%
     transform: translate(-50%, -50%)
   &__content
-    max-width: 425px
+    max-width: 676px
+    +screen('max', 1440)
+      max-width: 425px
   &__txt
     +fs(18px)
     line-height: 1.15
@@ -93,5 +120,7 @@
       width: 100%
       text-align: center
   &__pic
+    +screen('max', 1023)
+      width: 257px
     +screen('max', 600)
       width: 100%

@@ -2,10 +2,10 @@
   background-image: url(../icon/finished-bg.svg)
   background-repeat: no-repeat
   background-position: left 100%
-  background-repeat: no-repeat
   +screen('max', 1200)
-    background-position: right 100%
-    margin-top: 0
+    background-image: url(../icon/finished-bg-reverse.svg)
+    background-repeat: no-repeat
+    background-position: right 0%
   +screen('max', 600)
     background-size: 120px
     background-position: right 0%
@@ -19,7 +19,9 @@
       flex-flow: column
       gap: 4rem
   &__left
-    max-width: 435px
+    max-width: 638px
+    +screen('max', 1440)
+      max-width: 435px
   &__title
     margin-bottom: 3rem
     +screen('max', 600)
@@ -41,14 +43,19 @@
   &__right
     position: relative
     width: 60%
-    max-width: 715px
+    +screen('max', 1440)
+      max-width: 715px
     +screen('max', 1200)
       width: 100%
+      max-width: 100%
+    +screen('max', 600)
       padding-bottom: 7rem
     .slider-arrows
       position: absolute
       bottom: 2rem
       right: 2rem
+      +screen('max', 1200)
+        right: calc(100% - 703px)
       +screen('max', 600)
         display: none
     .slick-slide

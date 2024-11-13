@@ -9,7 +9,7 @@
     gap: 2.5rem
     +screen('max', 1200)
       grid-template-columns: repeat(2, 48vw)
-    +screen('max', 1023)
+    +screen('max', 600)
       grid-template-columns: 1fr
   &__outer-slider
     position: relative
@@ -36,15 +36,24 @@
       +screen('max', 1200)
         top: 64%
       +screen('max', 1023)
-        top: 75%
+        top: 51%
       +screen('max', 600)
         display: none
   &__pic
     width: 100%
     border-radius: 30px
+    object-fit: cover
+    +screen('max', 1440)
+      height: 455px
+    +screen('max', 1200)
+      height: 367px
+    +screen('max', 1023)
+      height: 270px
   &__slider
     width: 100%
-    max-width: 608px
+    max-width: 898px
+    +screen('max', 1440)
+      max-width: 649px
     +screen('max', 1023)
       max-width: calc(100vw - 3rem)
   &__caption
@@ -72,7 +81,7 @@
     +screen('max', 1200)
       top: 64%
     +screen('max', 1023)
-      top: 75%
+      top: 51%
     +screen('max', 600)
       width: 40px
       height: 40px

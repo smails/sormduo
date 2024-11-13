@@ -1,5 +1,6 @@
 .banner
   &__inner
+    padding-inline: 1rem
     +screen('max', 600)
       padding: 0
   &__container
@@ -75,21 +76,29 @@
     width: 100%
     vertical-align: middle
     border-radius: 40px
+    object-fit: cover
+    +screen('max', 1440)
+      height: 607px
+    +screen('max', 1200)
+      border-radius: 30px
     +screen('max', 1023)
-      height: 500px
-      object-fit: cover
       border-radius: 20px
+    +screen('max', 600)
+      height: 500px
   &__content
     position: absolute
     bottom: 3rem
     left: 6rem
-    +screen('max', 600)
+    +screen('max', 1200)
       left: 1.5rem
-      bottom: 2rem
+      bottom: 4rem
   .slider-arrows
     position: absolute
     bottom: 3rem
     right: 6rem
+    +screen('max', 1200)
+      right: 1.5rem
+      bottom: 4rem
     +screen('max', 600)
       display: none
   .slick-dots

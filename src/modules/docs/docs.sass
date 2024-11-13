@@ -8,11 +8,11 @@
     +screen('max', 1023)
       margin-bottom: 3rem
   &__list
-    display: flex
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
     gap: 2.6rem
-    +screen('max', 1023)
-      flex-wrap: wrap
     +screen('max', 600)
+      grid-template-columns: 1fr
       gap: 1rem
   &__item
     background: var(--gray-xs)
@@ -22,13 +22,15 @@
     position: relative
     transiton: .5s ease
     +screen('max', 1200)
-      padding: 3rem 1.5rem
+      padding: 2rem
+      min-height: 215px
     +screen('max', 1023)
-      width: calc(50% - 1.6rem)
+      min-height: 175px
     +screen('max', 600)
       width: 100%
       padding: 2rem 1.5rem
       border-radius: 15px
+      min-height: 103px
     &:hover
       background: var(--lazur-hover)
       .docs__sign, .docs__txt, .docs__download
@@ -40,22 +42,32 @@
     line-height: 1.1
     color: var(--black-60)
     transiton: .5s ease
-    +screen('max', 600)
+    +screen('max', 1023)
       +fs(14px)
       margin-bottom: 0.8rem
   &__txt
     font-weight: 600
-    +fs(18px)
+    +fs(22px)
     line-height: 1.05
     font-family: var(--second-family)
     margin-bottom: 5.7rem
     transiton: .5s ease
-    +screen('max', 600)
+    +screen('max', 1200)
       margin-bottom: 0
+    +screen('max', 1023)
+      +fs(16px)
+    +screen('max', 600)
       padding-right: 5rem
   &__download
     color: var(--black-40)
     transiton: .5s ease
+    +screen('max', 1200)
+      position: absolute
+      bottom: 3rem
+      left: 3rem
+    +screen('max', 1023)
+      left: 1.5rem
+      bottom: 2rem
     +screen('max', 600)
       width: 40px
       height: 40px
@@ -64,10 +76,11 @@
       align-items: center
       background: var(--white)
       border-radius: 100%
-      position: absolute
       right: 1.5rem
       top: 50%
       transform: translateY(-50%)
+      bottom: auto
+      left: auto
     svg
       margin-right: .5rem
       vertical-align: middle

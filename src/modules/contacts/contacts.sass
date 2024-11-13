@@ -3,19 +3,24 @@
     position: relative
     &:before
       content: ''
-      width: calc(100% + 10rem)
-      height: calc(100% + 10rem)
       position: absolute
+      width: 100%
+      height: calc(100% + 10rem)
       top: -5rem
-      left: -5rem
+      left: 0
       background-image: url(../img/contacts.png)
       border-radius: 40px
       background-repeat: no-repeat
       background-size: cover
       z-index: -1
+      +screen('max', 1440)
+        width: calc(100% + 10rem)
+        left: -5rem
       +screen('max', 1200)
         width: 100%
+        height: calc(100% + 2rem)
         left: 0
+        top: -1rem
       +screen('max', 600)
         content: none
   &__info
@@ -25,8 +30,11 @@
     box-sizing: border-box
     max-width: 416px
     position: relative
+    margin-left: 5rem
+    +screen('max', 1440)
+      margin-left: 0
     +screen('max', 1200)
-      margin-left: 2rem
+      margin-left: 1rem
     +screen('max', 600)
       padding: 0
       margin-left: 0

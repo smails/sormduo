@@ -4,14 +4,10 @@
     justify-content: space-between
     align-items: flex-start
     gap: 2rem
-    margin-bottom: 6.5rem
+    margin-bottom: 3rem
     +screen('max', 1023)
       flex-flow: column
       margin-bottom: 3rem
-  &__sign
-    max-width: 710px
-    +screen('max', 600)
-      +fs(18px)
   &__nav
     display: flex
     justify-content: space-between
@@ -23,18 +19,22 @@
   &__tab
     +screen('max', 1023)
       margin-bottom: 1rem
+      padding: 1.7rem 2rem
+      +fs(14px)
     +screen('max', 600)
       margin-bottom: 0
       flex-shrink: 0
   &__slider
-    margin-left: calc((100% - 1240px) / 2)
-    +screen('max', 1240)
-      margin-left: 1rem
+    margin-left: 5rem
+    +screen('max', 1200)
+      margin-left: 1.5rem
+    +screen('min', 1921)
+      margin-left: calc((100% - 1850px) / 2)
   &__pic
     width: 100%
     border-radius: 40px
     +screen('max', 1200)
-      max-width: calc(100vw - 2rem)
+      max-width: calc(100vw - 6rem)
     +screen('max', 600)
       width: 320px
       height: 230px
@@ -53,6 +53,7 @@
     max-width: 670px
     +screen('max', 600)
       max-width: 300px
+      +fs(16px)
   &__tabs
     +screen('max', 600)
       overflow: auto
@@ -66,5 +67,5 @@
     +screen('max', 600)
       margin-right: 1.5rem
   .slider-arrows
-    +screen('max', 600)
+    +screen('max', 1023)
       display: none

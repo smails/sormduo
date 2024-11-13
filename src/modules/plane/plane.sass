@@ -22,6 +22,8 @@
     display: none
     +screen('max', 1200)
       padding: 4rem
+    +screen('max', 1023)
+      padding: 3rem 1.5rem
     +screen('max', 600)
       padding: 2rem 1.5rem
       border-radius: 20px
@@ -56,9 +58,10 @@
     display: flex
     justify-content: flex-end
     gap: .5rem
-    max-width: 665px
-    width: 60%
+    width: 68%
     align-items: center
+    +screen('max', 1440)
+      max-width: 665px
     +screen('max', 1023)
       width: 100%
     +screen('max', 600)
@@ -127,20 +130,31 @@
       flex-flow: column-reverse
   &__left
     width: 40%
-    max-width: 396px
     flex-shrink: 0
+    max-width: 445px
+    +screen('max', 1440)
+      max-width: 396px
     +screen('max', 1023)
       width: 100%
+      max-width: 100%
+      display: flex
+      flex-flow: column
+      padding-bottom: 6rem
+    +screen('max', 600)
+      padding-bottom: 0
   &__right
     border-radius: 40px
     background: var(--white)
-    max-width: 665px
-    width: 60%
+    width: 68%
     position: relative
     padding-block: 3rem
+    +screen('max', 1440)
+      width: 60%
+      max-width: 665px
     +screen('max', 1023)
       width: 100%
       padding-block: 4rem
+      max-width: 100%
   &__dispatch
     display: flex
     gap: 1rem
@@ -148,14 +162,22 @@
     +screen('max', 1200)
       flex-flow: column
       align-items: flex-start
+    +screen('max', 1023)
+      order: -1
+      flex-flow: row
+      margin-bottom: 2rem
+      margin-top: 3rem
     +screen('max', 600)
       margin-top: 3rem
+      order: 1
+      display: block
   &__more, &__all
     +fs(14px)
     padding: 1.7rem 2.3rem
-    +screen('max', 1200)
-      width: 220px
-    +screen('max', 600)
+    width: 217px
+    +screen('max', 1440)
+      width: 200px
+    +screen('max', 1023)
       width: 100%
   &__coordination
     display: flex
@@ -230,11 +252,16 @@
     width: 60%
     +screen('max', 1200)
       width: 55%
-    +screen('max', 600)
+    +screen('max', 1023)
       width: 100%
-      position: relative
-  &__list
+      max-width: 100%
     +screen('max', 600)
+      position: relative
+      margin-top: 3rem
+  &__list
+    max-width: 396px
+    +screen('max', 1023)
+      max-width: 100%
       display: grid
       grid-template-columns: repeat(2, 1fr)
       gap: .8rem 1.5rem

@@ -13,14 +13,21 @@
   &__title
     +fs(32px)
   &__slider
-    margin-left: calc((100% - 1240px) / 2)
-    +screen('max', 1240)
-      margin-left: 1rem
+    width: calc(100% + 9.5rem)
+    +screen('max', 1440)
+      width: calc(100% + 5rem)
+    +screen('max', 1200)
+      width: calc(100% + 1.5rem)
   &__pic
     width: 100%
     border-radius: 40px
+    +screen('max', 1440)
+      width: calc(100% - 7rem)
+    +screen('max', 1200)
+      width: 100%
     +screen('max', 1023)
       width: 90vw
+      border-radius: 30px
   .slick-slide
     margin-right: 2.5rem
     +screen('max', 600)

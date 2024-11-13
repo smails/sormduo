@@ -8,16 +8,22 @@ body
 
 .inner
   width: 100%
-  padding-inline: 1.5rem
+  padding-inline: 5rem
   margin: 0 auto
   box-sizing: border-box
-  max-width: 1262px
-  &_middle
-    max-width: 1366px
+  +screen('max', 1200)
+    padding-inline: 1.5rem
+  +screen('min', 1921)
+    max-width: 1910px
+
+main
+  padding-top: 9rem
+  +screen('max', 600)
+    padding-top: 8rem
 
 .section
   margin: 11rem 0
-  +screen('max', 1023)
+  +screen('max', 1200)
     margin: 7.5rem 0
   +screen('max', 600)
     margin: 5rem 0

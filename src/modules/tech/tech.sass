@@ -1,7 +1,7 @@
 .tech
   margin: 14rem 0
-  +screen('max', 1023)
-    margin: 8rem 0
+  +screen('max', 1200)
+    margin: 7rem 0
   +screen('max', 600)
     margin: 5rem 0
   &__head
@@ -10,6 +10,8 @@
     align-items: center
     gap: 2rem
     margin-bottom: 6rem
+    +screen('max', 1200)
+      align-items: start
     +screen('max', 1023)
       flex-flow: column
       align-items: flex-start
@@ -31,15 +33,20 @@
     line-height: 1.05
     font-family: var(--second-family)
     max-width: 713px
+    +screen('max', 1200)
+      max-width: 50%
+    +screen('max', 1023)
+      max-width: 100%
     +screen('max', 600)
       +fs(18px)
   &__list
     display: grid
     grid-template-columns: repeat(4, 1fr)
     gap: 2.5rem
-    +screen('max', 1023)
-      grid-template-columns: repeat(2, 1fr)
+    +screen('max', 1200)
+      gap: 1.5rem
     +screen('max', 600)
+      grid-template-columns: repeat(2, 1fr)
       gap: 1rem
   &__item
     padding: 2rem
@@ -51,6 +58,8 @@
     justify-content: space-between
     align-items: flex-start
     gap: 2rem
+    +screen('max', 1023)
+      padding: 1rem
     +screen('max', 600)
       padding: 1.2rem
       gap: 1rem

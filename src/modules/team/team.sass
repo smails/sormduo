@@ -1,126 +1,100 @@
 .team
-  margin-top: 11rem
-  margin-bottom: 8.5rem
-  +screen('max', 1023)
-    margin-top: 7.5rem
-    margin-bottom: 4rem
+  margin-top: 10rem
+  +screen('max', 1200)
+    margin-top: 8rem
   +screen('max', 600)
     margin-top: 5rem
-    display: none
-  &__inner
+  &__title
+    margin-bottom: 4rem
+  &__row
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 3rem
+    +screen('max', 1200)
+      grid-template-columns: 1fr
+      gap: 1.5rem
+  &__tabs
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 0.5rem
+    margin-bottom: 1.5rem
+    +screen('min', 601)
+      display: none
+  &__box
+    padding: 4rem 5rem
+    box-sizing: border-box
+    border-radius: 40px
+    flex-flow: column
+    background: var(--gray-xs)
+    +screen('min', 601)
+      display: flex!important
+    +screen('max', 1200)
+      padding: 3rem
+    +screen('max', 600)
+      border-radius: 25px
+      padding: 2rem 1.5rem
+      display: none
+    &:first-of-type
+      +screen('max', 600)
+        display: block
+  &__head
     display: flex
     justify-content: space-between
-    align-items: flex-start
-    gap: 3rem
-    +screen('max', 1023)
-      flex-flow: column
-  &__left
-    max-width: 350px
-  &__title
-    margin-bottom: 2.5rem
-  &__box
-    display: flex
     align-items: center
-    gap: 3.2rem
+    padding-bottom: 3rem
+    border-bottom: 1px solid var(--yellow)
+    margin-bottom: 3rem
+    +screen('max', 600)
+      align-items: flex-start
+      padding-bottom: 2rem
+      margin-bottom: 2rem
+  &__subtitle
+    +fs(22px)
+    font-weight: 600
+    line-height: 1.1
+    flex-grow: 1
+    +screen('max', 600)
+      +fs(18px)
   &__btn
-    padding: 2rem
-  &__icons
-    margin-top: 5rem
-    max-width: 100%
-  &__right
-    max-width: 710px
-    width: 60%
-    +screen('max', 1023)
-      width: 100%
-  &__caption
-    margin-bottom: 2rem
-  &__txt
+    width: 100%
+    +screen('max', 1200)
+      margin-top: 3rem
+  &__holder
     +fs(18px)
-    line-height: 1.15
+    font-weight: 500
+    margin-bottom: 2rem
+  &__text
+    +fs(18px)
     color: var(--black-60)
-    margin-bottom: 5.5rem
-    +screen('max', 1023)
-      margin-bottom: 3.5rem
-  &__video
-    position: relative
-  &__preview
-    max-width: 100%
-    border-radius: 40px
-    vertical-align: middle
-    object-fit: cover
-    +screen('max', 1023)
-      height: 400px
-  &__play
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
+    p
+      margin-bottom: 1rem
+  &__pic
+    +screen('max', 600)
+      width: 70px
 
 .numbs
   margin-bottom: 11rem
+  margin-top: 3.5rem
   +screen('max', 600)
-    display: none
-  &__inner
+    margin-bottom: 5rem
+  &__row
     display: flex
     justify-content: space-between
     gap: min(67px, 3.5vw)
-    +screen('max', 1023)
+    padding: 2rem 5rem
+    box-sizing: border-box
+    border-radius: 40px
+    border: 1px solid var(--black-20)
+    +screen('max', 1200)
+      padding: 0
+      border: 0
       flex-wrap: wrap
-      justify-content: center
+  &__item
+    +screen('max', 600)
+      width: 40%
   &__txt
     font-weight: 600
     +fs(18px)
     line-height: 1.1
     margin-top: 1rem
 
-.team-mobile
-  margin: 5rem 0
-  +screen('min', 600)
-    display: none
-  &__title
-    margin-bottom: 2.5rem
-  &__box
-    display: flex
-    align-items: center
-    gap: 3.2rem
-    justify-content: space-between
-    margin-bottom: 3rem
-  &__btn
-    padding: 2rem
-  &__caption
-    margin-bottom: 2rem
-    +fs(20px)
-    font-weight: 600
-    line-height: 1.05
-  &__txt
-    line-height: 1.1
-    color: var(--black-60)
-  &__video
-    position: relative
-  &__preview
-    max-width: 100%
-    vertical-align: middle
-    object-fit: cover
-    border-radius: 20px
-    height: 170px
-  &__play
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
-  &__icons
-    margin-top: 3rem
-    max-width: 100%
-  &__numbs
-    display: grid
-    grid-template-columns: repeat(2, 1fr)
-    gap: 1.5rem
-    margin: 3rem 0
-  &__meaning
-    +fs(28px)
-    font-weight: 600
-    letter-spacing: -0.01em
-    font-family: var(--second-family)
-  &__sign
-    font-weight: 500
-    +fs(14px)

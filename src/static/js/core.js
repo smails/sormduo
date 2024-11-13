@@ -127,3 +127,10 @@ function getPlaneModalSlider() {
   });
 }
 
+
+
+$('.team__tab').click(function () {
+  $(this).addClass('active').siblings().removeClass('active');
+  $('.team__box').hide();
+  $('.team__box').eq($(this).index()).fadeIn('slow');
+})

@@ -16,6 +16,8 @@
     width: 100%
     vertical-align: middle
     object-fit: cover
+    +screen('max', 1200)
+      height: 746px
     +screen('max', 1023)
       height: 600px
   &__info
@@ -28,11 +30,12 @@
     justify-content: space-between
     align-items: flex-end
     gap: 3rem
-    flex-wrap: wrap
     z-index: 3
     width: 100%
+    +screen('max', 1200)
+      padding: 4rem 1.5rem
     +screen('max', 1023)
-      padding: 4rem
+      flex-wrap: wrap
     +screen('max', 600)
       padding: 3rem 1.5rem
   &__title
@@ -43,29 +46,37 @@
     letter-spacing: -0.04em
     color: var(--white)
     max-width: 818px
-    +screen('max', 1023)
+    +screen('max', 1200)
       +fs(48px)
+      line-height: 1
     +screen('max', 600)
       +fs(20px)
       text-wrap: balance
     span
       text-align: right
       display: block
-      +screen('max', 600)
+      +screen('max', 1200)
         text-align: left
         display: inline
   &__box
     max-width: 290px
-    +screen('max', 600)
+    +screen('max', 1023)
       max-width: 100%
       flex-grow: 1
+      display: flex
+      justify-content: space-between
+      align-items: center
   &__txt
     color: var(--white)
     line-height: 1.1
     margin-bottom: 3.5rem
+    +screen('max', 1023)
+      margin-bottom: 0
     +screen('max', 600)
       display: none
   &__btn
+    +screen('max', 1023)
+      flex-shrink:  0
     +screen('max', 600)
       width: 100%
       justify-content: center

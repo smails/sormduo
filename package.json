@@ -48,9 +48,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
-    "gsap": "^3.12.4",
     "jquery": "^3.7.1",
-    "jquery.animate-number": "^0.0.14",
     "slick-carousel": "^1.8.1"
   }
 }
