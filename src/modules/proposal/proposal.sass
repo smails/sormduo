@@ -11,14 +11,15 @@
       flex-wrap: wrap
   &__col
     flex-grow: 1
-    +screen('max', 1023)
-      width: 22%
+    width: 20%
     +screen('max', 600)
       width: 100%
     &:first-of-type
+      width: 25%
       +screen('max', 1023)
         width: 40%
     &:last-of-type
+      width: 23%
       +screen('max', 1023)
         order: 2
         width: 100%
@@ -29,6 +30,9 @@
   &__list
     display: flex
     gap: .3rem
+    position: relative
+  &__radio
+    flex-grow: 1
   &__hidden
     display: none
     &:checked + .proposal__txt
@@ -45,16 +49,9 @@
     color: var(--brown)
     transition: .5s ease
     cursor: pointer
-    width: clamp(55px, 5vw, 88px)
     display: inline-block
     box-sizing: border-box
-    +screen('max', 1440)
-      width: auto
-      min-width: 55px
-    +screen('max', 1023)
-      min-width: 52px
-    +screen('max', 600)
-      min-width: 60px
+    width: 100%
   &__group
     border-radius: 12px
     padding: 1.8rem 2rem
@@ -63,6 +60,7 @@
     box-sizing: border-box
     flex-grow: 1
     width: 50%
+    height: 56px
   &__field
     +fs(16px)
     background: none
@@ -74,13 +72,33 @@
     display: block
     font-weight: 500
     color: var(--brown)
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
   &__col
     &:last-of-type
       flex-shrink: 0
   &__submit
     padding: 2rem
-    width: min(446px, 23vw)
-    +screen('max', 1440)
-      width: min(257px, 20vw)
-    +screen('max', 1023)
-      width: 100%
+    width: 100%
+  .slider
+    position: absolute
+    width: calc(100% - 40px)
+    height: 2px
+    bottom: 0
+    left: 20px
+  .ui-slider-horizontal .ui-slider-range
+    top: 0
+    height: 100%
+    background-color: var(--lazur)
+    position: absolute
+
+  .ui-slider-horizontal .ui-slider-handle
+    top: -4px
+    background-color: var(--lazur)
+    height: 10px
+    width: 10px
+    border-radius: 50%
+    display: block
+    position: absolute

@@ -21,22 +21,24 @@
             +e.SPAN.txt 4+
       +e.col
         +e.caption Площадь, м²
-        +e.list
+        +e.list.squere
           +e.group
             input(type="hidden" name="PRICE_START" id="PRICE_START" class="price_start" value="1")
             +e.field.range-start 0
-            .slider
           +e.group
             input(type="hidden" name="PRICE_END" class="price_end" value="25")
             +e.field.range-end 0
-            .slider
+          .slider
       +e.col
         +e.caption Цена, млн ₽
-        +e.list
+        +e.list.price
           +e.group
-            +e.field(name='price_to' value="0")
+            input(type="hidden" name="PRICE_START" id="PRICE_START" class="price_start" value="1")
+            +e.field.range-start 0
           +e.group
-            +e.field(name='price_from' value="0")
+            input(type="hidden" name="PRICE_END" class="price_end" value="25")
+            +e.field.range-end 0
+          .slider
       +e.col
         +e.A.submit.btn_orange.js-open-modal(href="#success") Показать
           span  3 450 
